@@ -1,0 +1,52 @@
+// > global
+
+// @font-face {
+// 	font-family: 'ttwcenmt';
+// 	src: url('./ttwcenmt.eot');
+// 	src: local('ttwcenmt'), url('./ttwcenmt.woff') format('woff'), url('./ttwcenmt.ttf') format('truetype');
+// }
+
+html, body {
+	// height: 100%;
+	// min-width: $cnt_width;
+}
+
+body {
+	font-family: $NotoSansTC;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+
+	color: #4D4D4D;
+	letter-spacing: 2px;
+	line-height: 1.5;
+
+	overflow-x: hidden;
+}
+
+
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: currentColor;
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		color: currentColor;
+		text-decoration: none;
+	}
+
+}
+
+.td-u {
+	text-decoration: underline;
+}
+
+
+.lis-n {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+}

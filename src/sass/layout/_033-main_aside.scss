@@ -1,0 +1,5 @@
+.main_aside {
+    @include media-down(lg) {
+        margin-bottom: 2rem;
+    }
+}

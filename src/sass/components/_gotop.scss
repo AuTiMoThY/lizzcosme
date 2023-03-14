@@ -1,0 +1,39 @@
+.btn-go_top {
+	@include fixed($B: -100%, $R: 1.5rem);
+	z-index: 900;
+
+	transition: $transition-base;
+
+
+	&-inner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include circle(50);
+		border: 1px solid color("secondary");
+
+		transition: $transition-base;
+
+		.svgicon {
+			width: 30px;
+
+			fill: none;
+			stroke: currentColor;
+		}
+		&:hover {
+			background-color: color("secondary");
+			color: lighten(color("secondary"), 50);
+
+			&:before {
+				border-color: currentColor;
+			}
+		}
+	}
+
+	&.js-show {
+		bottom: 3rem;
+	}
+
+
+}

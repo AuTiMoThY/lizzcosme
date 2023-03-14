@@ -1,0 +1,30 @@
+.about_article {
+
+
+    &-heading {
+        margin-bottom: 40px;
+    }
+    &-pic {
+        position: relative;
+
+        .img_div {
+            @include rwdBlock(376, 282);
+        }
+
+        // img {
+        //     max-width: fit-content;
+        //     width: auto;
+        //     height: 100%;
+        // }
+
+        @include media-down(md) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &-content {
+        .txt {
+            letter-spacing: 2px;
+        }
+    }
+}

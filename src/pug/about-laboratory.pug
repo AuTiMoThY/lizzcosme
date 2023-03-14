@@ -1,0 +1,121 @@
+extends _layout.pug
+block vars
+	- var page_class = "about_page laboratory";
+	- var page_title = "儷氏實驗室";
+
+
+block page_pluginStyle
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// .page_section.page_main-hd  START
+		section.page_section.page_main-hd
+			.page_main-hd-inner.text-center
+				h2.title #{page_title}
+				.lizz_breadcrumb
+					ul.cf.lis-n
+						li.lizz_breadcrumb-item
+							a(href="./").inner 首頁
+						li.lizz_breadcrumb-item.current
+							.arrow /
+							a(href="javascript:;").inner #{page_title}
+		// section.page_section.page_main-hd  END  !!
+		// =========================================================================
+		// article.page_section.page_main-bd  START
+		article.page_section.page_main-bd.about_article
+			.container
+				section.main_section.laboratory-hd.article-top
+					.row
+						.col-md-4
+							.article-pic.img-style1
+								.img_div
+									img(src="./public/images/about/about5.jpg")
+						.col-md-7.offset-md-1.d-flex
+							.article-content.laboratory-content.align-self-center
+								.txt_block
+									p.txt 為符合代工客戶產品保密之需求，結合原料研發實驗室進行產業整合，於2019年10月，儷氏通過ISO22716，同時取得液劑、油劑、乳劑、膏劑等劑型之認證，並正積極取得化妝品產業良好生產規範(GMP)。
+									p.txt 本公司配方實驗室人員都是專業科系畢業之專業人員，結合知名原料廠商，所有商品經過安定性測試，提供客戶有品質保證的配方，並且配合生產團隊以ODM、OEM模式進行多元化客製，與合作夥伴客戶一同成長。
+									.big_txt 儷氏實驗室
+				.laboratory-hr
+				section.main_section.laboratory-bd
+					.row
+						.col-md-5
+							h3.main_section-heading.laboratory-bd-heading.style1.txt-h5 每個產品都是我們的孩子
+						.col-md-7
+							p.txt 產品的開發並非只是使用高端原料或技術，而是一連串的不同考量與流程的整合，包含創意概念的發想、技術科技的發明及最重要的產品商品化。每一個環節都是同等的重要且互相關聯影響，缺一不可。
+							p.txt 在成本及市場性的平衡上，商品開發必須要由業主需求與市場趨勢的深入洞察作為開始。為作好這一件事，必須要傾聽外部市場與顧客的心聲，找出顧客所面臨的痛點，而非只是盲目的追求技術或原料的突破，最後卻開發出市場不想要的產品。產品研發的方向，須要和市場拉力的方向一致，才能提高新產品開發的成功率。
+							p.txt 儷氏對於每款量產的產品都視為是自己的作品，無論是從研發者的角度或是使用者的體驗，我們都會頻繁的檢視能否做得更好，為業主爭取商機，為消費者提供好商品，也為儷氏自己增加一個驕傲的孩子。
+				section.main_section.laboratory_list
+					ul.lis-n
+						li.laboratory_item
+							.row.no-gutters
+								.col-md-8.laboratory_item-content
+									.icon
+										img(src="./public/images/laboratory/medical-report.svg")
+									h4.laboratory_item-content-heading.txt-h4 配方開發
+									p.laboratory_item-content-txt 以嚴謹的篩選功效成分，結合現代生產公益、專利配方組成及肌膚測試等階段，嚴格把關產品的功能性和安全性，並持續開發豐富的產品系統以及獨家專利配方，滿足客戶各種不同的需求。
+								.col-md-4.laboratory_item-img
+									.img_wrap
+										.img_div.fit-content
+											img(src="./public/images/laboratory/laboratory6.jpg")
+
+						li.laboratory_item
+							.row.no-gutters
+								.col-md-8.laboratory_item-content
+									.icon
+										img(src="./public/images/laboratory/mass.svg")
+									h4.laboratory_item-content-heading.txt-h4 製程技術
+									p.laboratory_item-content-txt 製程的設計優惠與品質優劣密切相關，儷氏長期參與業界原料研討，掌握新技術與製程的開發前端，並著重成分的活性及穩定性，完成設計新品的製程及優化舊品的製程。
+								.col-md-4.laboratory_item-img
+									.img_wrap
+										.img_div.fit-content
+											img(src="./public/images/laboratory/laboratory7.jpg")
+
+						li.laboratory_item
+							.row.no-gutters
+								.col-md-8.laboratory_item-content
+									.icon
+										img(src="./public/images/laboratory/safe.svg")
+									h4.laboratory_item-content-heading.txt-h4 安全有效
+									p.laboratory_item-content-txt 活性成分在應用產品前，會透過不同平台檢測功效，確認是否達到所預期的效果，同時藉由細胞毒性測試，把關成分的安全性，亦可配合顧客需求協助相關測試的執行。
+								.col-md-4.laboratory_item-img
+									.img_wrap
+										.img_div.fit-content
+											img(src="./public/images/laboratory/laboratory8.jpg")
+
+						li.laboratory_item
+							.row.no-gutters
+								.col-md-8.laboratory_item-content
+									.icon
+										img(src="./public/images/laboratory/flowers.svg")
+									h4.laboratory_item-content-heading.txt-h4 香氛設計
+									p.laboratory_item-content-txt 嗅覺是最直接而且能喚起情緒記憶的感官，儷氏透過國內外優質的原料廠交流合作，網羅世界各地品質優異的精油，搭配專屬的香氛組和，並透過專業儀器分析精油對於人體的影響，讓香氛不只是味道，而是能提升產品使用體驗的助力。
+								.col-md-4.laboratory_item-img
+									.img_wrap
+										.img_div.fit-content
+											img(src="./public/images/laboratory/laboratory9.jpg")
+
+						li.laboratory_item
+							.row.no-gutters
+								.col-md-8.laboratory_item-content
+									.icon
+										img(src="./public/images/laboratory/dermis.svg")
+									h4.laboratory_item-content-heading.txt-h4 皮膚檢測
+									p.laboratory_item-content-txt 透過貼膚檢測產品是否具有刺激性，並透過專業的皮表生理評估儀確認產品功效，建立大數據膚質資料庫，提升產品開發實力。
+								.col-md-4.laboratory_item-img
+									.img_wrap
+										.img_div.fit-content
+											img(src="./public/images/laboratory/laboratory10.jpg")
+
+
+
+		// article.page_section.page_main-bd  END  !!
+
+
+
+block page_script
+	script(src="./public/js/page/about.js?v=" + version)

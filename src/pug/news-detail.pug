@@ -1,0 +1,295 @@
+extends _layout.pug
+block vars
+	- var page_class = "news_page detail_page";
+	- var page_title = "產業新訊";
+
+
+block page_pluginStyle
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// .page_section.page_main-hd  START
+		section.page_section.page_main-hd
+			.page_main-hd-inner.text-center
+				h2.title #{page_title}
+				.lizz_breadcrumb
+					ul.cf.lis-n
+						li.lizz_breadcrumb-item
+							a(href="./").inner 首頁
+						li.lizz_breadcrumb-item.current
+							.arrow /
+							a(href="javascript:;").inner #{page_title}
+		// section.page_section.page_main-hd  END  !!
+		// =========================================================================
+		// article.page_section.page_main-bd  START
+		main.page_section.page_main-bd.news_main
+			.container
+				.row
+					aside.main_aside.col-lg-2
+						.news_category
+							h3.heading.txt-white.txt-h4 分類
+							ul.lis-n
+								li.news_category-item
+									a.inner(href="javascript:;") 所有文章
+								li.news_category-item
+									a.inner(href="javascript:;") 產業新訊
+								li.news_category-item
+									a.inner(href="javascript:;") 市場動態
+								li.news_category-item
+									a.inner(href="javascript:;") 原料趨勢
+								li.news_category-item
+									a.inner(href="javascript:;") 保養新知
+								li.news_category-item
+									a.inner(href="javascript:;") 化妝品法規
+					.main_container.col-lg-9.offset-xl-1
+						.news_main-content
+							.news_main-content-hd
+								h3.news-title 化妝品&保養品相關用語中英文對照表
+								.news-info
+									.news-tag
+										.icon.svgicon
+											include ../svg/icon-tag.svg
+										.txt 化妝品法規
+									.news-time
+										.icon.svgicon
+											include ../svg/icon-time.svg
+										.txt 2021/04/26
+							.news_main-content-bd
+								.news-pic
+									.img_div
+										img(src="public/images/news/news_detail.jpg")
+								.news-detail
+									.news-detail-bd.html_editor
+										p.txt-paragraph_heading 彩妝品
+										p
+											| 彩妝：Cosmetics<br>
+											| 防曬：Sun block<br>
+											| 隔離霜：Sun screen<br>
+											| 遮瑕產品：Concealer、Corrector<br>
+											| 修容餅：Shading powder<br>
+											| 粉霜：Cream foundation<br>
+											| 粉底液：一般使用Liquid foundation來表示液狀粉底，也可只使用Foundation。<br>
+											| 粉條：Stick foundation<br>
+											| 粉餅：Powder foundation<br>
+											| 蜜粉餅：Pressed powder<br>
+											| 蜜粉：Powder、Face powder、Loose powder<br>
+											| 散粉：Loose powder<br>
+											| 閃粉：Shimmering powder、Glitter<br>
+											| 腮紅：Blush<br>
+											| 眉粉：Brow powder<br>
+											| 眉筆：Brow pencil<br>
+											| 眼線液（眼線筆）：Liquid eye liner、Eye liner<br>
+											| 眼影：Eye shadow<br>
+											| 睫毛膏：Mascara<br>
+											| 唇線筆：Lip liner<br>
+											| 唇膏：Lip color、Lipstick（筆狀 Lip pencil；膏狀 Lip lipstick；盒裝 Lip color、Lip gloss）<br>
+											| 唇彩：Lip gloss、Lip color<br>
+											| 口紅雨衣：Lip coat<br>
+										br
+										p.txt-paragraph_heading 彩妝保養工具
+										p
+											| 工具：Cosmetic applicators、Accessories<br>
+											| 化妝棉：Cotton pads<br>
+											| 棉花棒：Q-tips<br>
+											| 面紙：Facial tissue<br>
+											| 吸油紙：Oil-absorbing sheets<br>
+											| 粉刷：Cosmetic brush、Face brush<br>
+											| 粉撲：Powder puffs<br>
+											| 海綿撲：Sponge puffs<br>
+											| 腮紅刷：Blush brush<br>
+											| 口紅刷：Lip brush<br>
+											| 眼影刷：Eye shadow brush、Shadow applicator<br>
+											| 削筆器：Pencil sharpener<br>
+											| 眉刷：Brow brush<br>
+											| 描眉卡：Brow template<br>
+											| 睫毛夾：Lash curler<br>
+											| 電動睫毛捲：Electric lash curler<br>
+											| 電動剃毛器：Electric shaver-for women<br>
+										br
+										p.txt-paragraph_heading 臉部/身體護膚品
+										p
+											| 乾性皮膚：Dry<br>
+											| 中性皮膚：Normal<br>
+											| 油性皮膚：Oily<br>
+											| 混合性皮膚：Combination<br>
+											| 敏感性皮膚：Sensitive<br>
+											| 護膚：Skin care<br>
+											| 卸妝水：Makeup remover<br>
+											| 卸妝乳：Makeup removing lotion<br>
+											| 洗面乳：Facial cleanser、Face wash(foaming、milky、cream、gel)<br>
+											| 化妝水：Toning lotion<br>
+											| 爽膚水：Toner、Astringent<br>
+											| 柔膚水：Toner、Smoothing toner（Facial mist、Facial spray、Complexion mist）<br>
+											| 緊膚水：Firming lotion<br>
+											| 精華液：Essence<br>
+											| 護膚霜：Moisturizers、Creams<br>
+											| 日霜：Day cream<br>
+											| 晚霜：Night cream<br>
+											| 眼部凝膠：Eye gel<br>
+											| 面膜：Facial mask、Masque<br>
+											| 眼膜：Eye mask<br>
+											| 護唇膏：Lip care<br>
+											| 沐浴露：Body wash<br>
+											| 磨砂膏：Facial scrub<br>
+											| 去黑頭：(Deep) Pore cleanser、Striper pore refining<br>
+											| 去死皮：Exfoliating scrub<br>
+											| 護手霜：Hand lotion、Moisturizer<br>
+										br
+										p.txt-paragraph_heading 髮類/指甲類產品
+										p
+											| 髮品：Hair products、Accessories<br>
+											| 洗髮精：Shampoo<br>
+											| 護髮素：Hair conditioner<br>
+											| 慕斯：Mousse<br>
+											| 髮膠：Styling gel<br>
+											| 染髮：Hair color<br>
+											| 冷燙水：Perm、Perming formula<br>
+											| 捲髮器：Rollers、Perm rollers<br>
+											| 指甲：Manicure、Pedicure<br>
+											| 指甲油：Nail polish、Nail color、Nail enamel<br>
+											| 護甲液：Nail saver<br>
+											| 指甲油去除液：Nail polish remover<br>
+										br
+										p.txt-paragraph_heading 質地/功效/其他
+										p
+											| 露：Lotion<br>
+											| 凝膠：Gel<br>
+											| 霜：Cream<br>
+											| 乳：Milk<br>
+											| 剝撕式面膜：Pack<br>
+											| 敷面剝落式面膜：Peeling<br>
+											| 磨砂式(去角質)：Scrub<br>
+											| 泡沫：Foam<br>
+											| 保濕：Moisturizer<br>
+											| 美白：Whitening<br>
+											| 修護：Repair<br>
+											| 活化：Revitalite<br>
+											| 賦活用：Active<br>
+											| 緊膚：Firm<br>
+											| 抗、防：Anti-<br>
+											| 抗老防皺：Anti-wrinkle<br>
+											| 抑制油脂：Oil-control<br>
+											| 青春痘用品：Acne、Spot<br>
+											| 日曬後用品：After sun<br>
+											| 臉部用：Facial<br>
+											| 清潔用：Clean-、Purify-<br>
+											| 保濕用：Hydra-<br>
+											| 多元：Mult-<br>
+											| 溫和的：Gentle<br>
+											| 滋養：Nutritious<br>
+											| 無酒精：Alcohol-free<br>
+											| 持久性：Long lasting<br>
+											| 防水：Waterproof<br>
+											| 快乾：Fast、Quick dry<br>
+											| 平衡酸鹼：Balancing<br>
+											| 溶解：Solvent"<br>
+										br
+									.news-detail-ft.d-flex.align-items-center
+										span.mr-2 分享
+										a.btn-social_share.mx-2(href="javascript:;")
+											.svgicon
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7.2 14" enable-background="new 0 0 7.2 14" xml:space="preserve">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M7.2,2.3V0.1C7,0.1,6.2,0,5.3,0C3.4,0,2.1,1.2,2.1,3.3v1.8H0v2.5h2.1V14h2.6V7.6h2.1l0.3-2.5H4.7V3.5c0-0.7,0.2-1.2,1.2-1.2L7.2,2.3z"/>
+												</svg>
+										a.btn-social_share.mx-2(href="javascript:;")
+											.svgicon
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M6.96652 5.81134C6.93599 6.1978 6.96515 6.72054 6.96515 7.12204C6.96515 7.32986 6.99569 7.56502 6.89998 7.72271C6.82706 7.84302 6.63748 7.93326 6.45336 7.8535C6.28337 7.77922 6.22412 7.66574 6.22412 7.42374L6.22458 4.80461C6.22503 4.57264 6.2902 4.44777 6.46338 4.38442C6.70538 4.29601 6.83117 4.44412 6.92414 4.55669C7.05174 4.71209 8.24988 6.38876 8.31232 6.42704C8.3073 5.98725 8.31186 5.54564 8.31186 5.10631C8.31186 4.89986 8.28543 4.64829 8.38432 4.51567C8.47091 4.39946 8.67417 4.28962 8.86331 4.40721C9.02464 4.50747 9.05244 4.63918 9.05198 4.88026L9.05244 6.83948C9.05244 7.27107 9.15817 7.77147 8.7676 7.87401C8.55842 7.9287 8.42124 7.79562 8.34285 7.67941L6.96652 5.81134ZM10.279 7.14143C10.5182 7.15784 10.8026 7.14416 11.0469 7.14416C11.3276 7.14416 11.4935 7.13368 11.617 7.32555C11.7515 7.53473 11.6234 7.76214 11.4789 7.83643C11.3012 7.92849 10.2972 7.88656 10.0297 7.88747C9.78085 7.88838 9.61086 7.82868 9.55435 7.61768C9.52108 7.49463 9.52928 4.70277 9.55799 4.61527C9.62863 4.40198 9.77264 4.36051 10.0484 4.36096C10.2995 4.36142 10.551 4.36096 10.8022 4.36096C11.0113 4.36096 11.3263 4.3204 11.4953 4.41292C11.653 4.49951 11.7255 4.72282 11.6088 4.93383C11.5081 5.11567 11.2903 5.10017 11.0282 5.10017C10.7789 5.10017 10.5237 5.0947 10.2771 5.10154L10.279 5.74869C10.69 5.77695 11.3513 5.68443 11.5254 5.83346C11.7665 6.04036 11.6612 6.33477 11.5172 6.4241C11.3294 6.54076 10.6025 6.48562 10.2776 6.49428L10.279 7.14143ZM3.23864 7.1471C3.4779 7.13936 3.72491 7.14482 3.96463 7.14482C4.20709 7.14482 4.40989 7.11657 4.53476 7.26787C4.65599 7.41371 4.64779 7.66346 4.51562 7.78605C4.37708 7.91457 4.15422 7.88677 3.92681 7.88677H3.21084C2.96975 7.88677 2.77196 7.91457 2.62111 7.78742C2.46206 7.65343 2.49898 7.4447 2.49943 7.19769V6.50041C2.49943 6.02963 2.49989 5.5584 2.49989 5.08762C2.49989 4.85474 2.46252 4.6173 2.59696 4.47374C2.71636 4.34659 2.95882 4.31742 3.10967 4.45369C3.27145 4.59861 3.23819 4.76997 3.23819 5.03111L3.23864 7.1471ZM5.2116 4.38555C5.39161 4.31992 5.52606 4.39649 5.61265 4.49493C5.71747 4.61388 5.70288 4.76062 5.70288 4.937L5.7038 7.06575C5.7038 7.45632 5.76851 7.74617 5.44357 7.86512C5.295 7.91935 5.13002 7.84552 5.0571 7.76349C4.95957 7.65366 4.96185 7.51146 4.96231 7.32962L4.96276 5.20041C4.96322 4.81212 4.89076 4.50268 5.2116 4.38555ZM6.42976 0.34662C5.03201 0.458732 3.65067 0.86434 2.54915 1.61813C2.23378 1.8337 1.86144 2.12446 1.59665 2.38149C1.45902 2.51548 1.31318 2.66952 1.19515 2.82812L1.00647 3.07285C0.973202 3.11842 0.939477 3.1485 0.912589 3.18633C0.014783 4.43186 -0.228582 5.93626 0.218043 7.45569C0.386666 8.02719 0.79911 8.76822 1.21839 9.22715C1.26168 9.275 1.27445 9.30736 1.31273 9.35931L1.84594 9.88022C2.06515 10.0525 1.97947 10.0151 2.21372 10.1719C2.32584 10.2471 2.36867 10.3059 2.4621 10.3569L2.84538 10.5948C3.01309 10.7078 3.06003 10.7411 3.2642 10.8364C3.8079 11.0898 4.13922 11.2629 4.82511 11.4234C5.14868 11.499 6.03145 11.6562 6.21921 11.7437C6.30626 11.7838 6.40971 11.8645 6.44982 11.9279C6.60887 12.1776 6.45802 12.8138 6.41336 13.0786C6.37234 13.3224 6.28393 13.6638 6.60112 13.677C6.81395 13.6856 7.09697 13.5489 7.25374 13.4642L9.48823 12.0628C9.62632 11.9748 9.68966 11.9028 9.7243 11.8846C9.86831 11.808 10.4106 11.4211 10.5383 11.3035C10.7611 11.097 10.7297 11.1458 10.9598 10.9713C11.0304 10.9179 11.0063 10.9006 11.0696 10.8564C11.2159 10.7552 11.5331 10.5078 11.6498 10.382C11.6981 10.3305 11.7282 10.3191 11.7665 10.2712C11.8882 10.1209 12.0613 10.0142 12.3006 9.73211C12.348 9.67651 12.3658 9.6797 12.4095 9.63412L12.6105 9.40124C12.7208 9.23307 12.682 9.30144 12.8069 9.16471C12.9751 8.98196 13.0877 8.76822 13.1624 8.6716C13.3196 8.46652 13.527 8.07413 13.6259 7.83623C13.8023 7.41331 13.9495 6.93706 13.9855 6.46173C14.0611 5.46685 13.8387 4.42959 13.3843 3.67443L13.1515 3.28477C12.9459 2.99674 12.7117 2.71327 12.4665 2.46216C10.9575 0.918117 8.55077 0.17663 6.42976 0.34662Z"/>
+												</svg>
+										a.btn-social_share.mx-2(href="javascript:;")
+											.svgicon
+												<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5669 3.14454C12.7482 7.18444 9.73581 11.6887 4.40282 11.6887C2.78087 11.6887 1.27107 11.213 0 10.3981C1.52356 10.5776 3.04472 10.1552 4.25215 9.20852C2.99553 9.18548 1.93464 8.35507 1.56932 7.21403C2.01926 7.30003 2.46199 7.27492 2.86618 7.16518C1.48469 6.88723 0.531476 5.64299 0.562436 4.31241C0.949776 4.52741 1.39284 4.65675 1.86378 4.6712C0.584451 3.81671 0.222222 2.12768 0.974888 0.836663C2.39112 2.57454 4.5074 3.71798 6.89474 3.83804C6.47609 2.041 7.83901 0.311035 9.69281 0.311035C10.5191 0.311035 11.2656 0.659504 11.7891 1.21781C12.4434 1.08916 13.0581 0.850079 13.613 0.520873C13.3987 1.19167 12.9432 1.75479 12.3502 2.1098C12.9312 2.04065 13.4847 1.8862 14 1.65778C13.6151 2.23398 13.128 2.73966 12.5669 3.14454Z"/>
+												</svg>
+										a.btn-social_share.mx-2(href="javascript:;")
+											.svgicon
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M7 0C3.134 0 0 2.90185 0 6.48148C0 8.5212 1.01791 10.3406 2.6087 11.5287V14L4.99213 12.6919C5.62822 12.8679 6.30209 12.963 7 12.963C10.866 12.963 14 10.0611 14 6.48148C14 2.90185 10.866 0 7 0ZM7.6956 8.72839L5.91299 6.82716L2.43473 8.72839L6.26082 4.66667L8.08691 6.5679L11.5217 4.66667L7.6956 8.72839Z"/>
+												</svg>
+
+
+
+
+
+							.news_main-content-ft
+								h4.main_section-heading 推薦文章
+								.recommend_list
+									ul.lis-n.row
+										li.recommend_item.col-12.col-md-4
+											.news_card
+												.inner
+													.news_card-pic
+														.news-pic.img_div
+															img(src=PATH_IMG + "news/news1.jpg")
+													.news_card-content.news-content
+														.news-content-hd
+															.news-tag
+																.icon.svgicon
+																	include ../svg/icon-tag.svg
+																.txt 保養知識
+															.news-time
+																.icon.svgicon
+																	include ../svg/icon-time.svg
+																.txt 2021/04/26
+														.news-content-bd
+															.news-title [文章標題範例]研究：美國、加拿逾半數化妝品 可能含有毒化學物質
+															.news-brief [內文範例]近期有美國研究報告指出，在美國和加拿大銷售的化妝品中，有一半以上可能含有毒化學物質，即多氟烷基物質（PFAS）。《美聯社》報導，聖母大學（Notre Dame University）的研究人員測試了230多種產品，包括遮瑕、粉底、眼影和眉筆等化妝品，發現56%的粉底和眼部產品、48%的唇部產品和47%的睫毛膏都含有PFAS。
+														.news-content-ft
+															a(href="javascript:;").lizz_link.news-link 閱讀全文
+
+										li.recommend_item.col-12.col-md-4
+											.news_card
+												.inner
+													.news_card-pic
+														.news-pic.img_div
+															img(src=PATH_IMG + "news/news1.jpg")
+													.news_card-content.news-content
+														.news-content-hd
+															.news-tag
+																.icon.svgicon
+																	include ../svg/icon-tag.svg
+																.txt 保養知識
+															.news-time
+																.icon.svgicon
+																	include ../svg/icon-time.svg
+																.txt 2021/04/26
+														.news-content-bd
+															.news-title [文章標題範例]研究：美國、加拿逾半數化妝品 可能含有毒化學物質
+															.news-brief [內文範例]近期有美國研究報告指出，在美國和加拿大銷售的化妝品中，有一半以上可能含有毒化學物質，即多氟烷基物質（PFAS）。《美聯社》報導，聖母大學（Notre Dame University）的研究人員測試了230多種產品，包括遮瑕、粉底、眼影和眉筆等化妝品，發現56%的粉底和眼部產品、48%的唇部產品和47%的睫毛膏都含有PFAS。
+														.news-content-ft
+															a(href="javascript:;").lizz_link.news-link 閱讀全文
+
+										li.recommend_item.col-12.col-md-4
+											.news_card
+												.inner
+													.news_card-pic
+														.news-pic.img_div
+															img(src=PATH_IMG + "news/news1.jpg")
+													.news_card-content.news-content
+														.news-content-hd
+															.news-tag
+																.icon.svgicon
+																	include ../svg/icon-tag.svg
+																.txt 保養知識
+															.news-time
+																.icon.svgicon
+																	include ../svg/icon-time.svg
+																.txt 2021/04/26
+														.news-content-bd
+															.news-title [文章標題範例]研究：美國、加拿逾半數化妝品 可能含有毒化學物質
+															.news-brief [內文範例]近期有美國研究報告指出，在美國和加拿大銷售的化妝品中，有一半以上可能含有毒化學物質，即多氟烷基物質（PFAS）。《美聯社》報導，聖母大學（Notre Dame University）的研究人員測試了230多種產品，包括遮瑕、粉底、眼影和眉筆等化妝品，發現56%的粉底和眼部產品、48%的唇部產品和47%的睫毛膏都含有PFAS。
+														.news-content-ft
+															a(href="javascript:;").lizz_link.news-link 閱讀全文
+
+
+		// article.page_section.page_main-bd  END  !!
+
+
+
+block page_script
+	script(src="./public/js/page/news-detail.js?v=" + version)
+

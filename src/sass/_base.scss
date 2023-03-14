@@ -1,0 +1,41 @@
+@import "base/_global";
+@import "base/_clearfix";
+@import "base/_img_div";
+@import "base/_text";
+@import "base/_icon";
+@import "base/_icontxt";
+@import "base/_list_style";
+@import "base/_html_editor";
+
+
+
+select {
+	appearance: none;
+	@include media-breakpoint-down(xs){
+		appearance: inherit;
+	};
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#wpadminbar#wpadminbar {
+	@media (max-width: 600px) {
+		position: fixed;
+	}
+}
+#wpadminbar #wp-admin-bar-wpseo-menu#wp-admin-bar-wpseo-menu {
+	@media (max-width: 320px) {
+		display: none;
+	}
+}

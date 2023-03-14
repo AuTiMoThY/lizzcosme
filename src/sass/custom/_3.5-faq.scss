@@ -1,0 +1,108 @@
+.faq_list {
+    ul {
+        width: 776px;
+        margin: auto;
+
+        counter-reset: this-counter;
+
+        @include media-down(lg) {
+            width: 100%;
+        }
+    }
+}
+
+$transition-base-delay: all 0.3s 0.3s ease-in-out;
+.faq_item {
+    counter-increment: this-counter;
+    transition: $transition-base-delay;
+
+    &.js-faqOpen {
+        padding: 40px 0;
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+    }
+
+
+    &-inner {
+        margin-bottom: 1px;
+        box-shadow: 0 5px 10px rgba(114, 112, 91, 0);
+        transition: $transition-base-delay;
+
+        .js-faqOpen & {
+            box-shadow: 0 5px 10px rgba(114, 112, 91, 0.1);
+        }
+    }
+
+    &-hd {
+        position: relative;
+        padding: 1rem 1.5rem;
+        background-color: #FAF8F5;
+
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+
+        &:before {
+            content: "Q"counter(this-counter)".";
+
+            font-size: 1.5rem;
+            color: color("secondary");
+            font-weight: 100;
+        }
+
+        .toggle_icon {
+            @include wh(16);
+            @include absolute(50%, 1.5rem);
+            transform: translateY(-50%);
+
+            &:before, &:after {
+                @include psudoClass;
+                background-color: color("grey2");
+                transition: $transition-base-delay;
+            }
+
+            &:before {
+                @include absolute(50%, $L:50%);
+                transform: translate(-50%, -50%);
+                @include wh(100%, 1);
+            }
+
+            &:after {
+                @include absolute(50%, $L:50%);
+                transform: translate(-50%, -50%);
+                @include wh(1, 100%);
+
+                .js-faqOpen & {
+                    height: 0%;
+                }
+            }
+        }
+    }
+
+    &-bd {
+        max-height: 0;
+        transition: $transition-base;
+        overflow: hidden;
+
+        .js-faqOpen & {
+            max-height: 800px;
+        }
+    }
+
+    &-question {
+        padding: 0 1.5rem;
+        margin-bottom: 0;
+        font-size: 1rem;
+    }
+
+    &-answer {
+        padding: 1.5rem;
+        margin-bottom: 0;
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

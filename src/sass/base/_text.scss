@@ -1,0 +1,75 @@
+/*------------------------------------------------------------------------*\
+        >>  text style (Typography)
+\*------------------------------------------------------------------------*/
+%txt-common-style {
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+
+
+@each $i, $size in $txt-size {
+	.txt-#{$i} {
+		@extend %txt-common-style;
+		@include remCalc(font-size, $size);
+	}
+}
+.txt-h3 {
+    @include media-down(sm) {
+        font-size: 1.6rem;
+    }
+}
+// .txt-h1 {
+// 	@extend %txt-common-style;
+// 	@include remCalc(font-size, map-get($txt-size, "h3"));
+// }
+
+@each $name, $color in $colors {
+	.txt-#{$name} {
+		color: $color;
+	}
+}
+
+.txt-heading-vertical {
+    writing-mode: vertical-lr;
+    letter-spacing: 10px;
+    line-height: 24px;
+    font-size: 1rem;
+    font-weight: 300;
+    white-space: nowrap;
+
+    @include absolute(0, $L:0);
+    margin: 0;
+    padding-left: 1rem;
+
+    color: color("secondary");
+
+    &:after {
+        @include psudoClass;
+        @include absolute(-4, $L:0);
+        width: 1px;
+        height: 100%;
+        background-color: color("brand");
+        margin-right: 1rem;
+    }
+}
+
+.txt-heading-horizontal {
+    display: inline-block;
+    color: color("secondary");
+    border-bottom: 1px solid color("brand");
+    padding-bottom: 0.5rem;
+
+    &.style1 {
+        border-bottom: none;
+        border-left: 1px solid color("brand");
+        padding-left: 1rem;
+    }
+}
+
+
+.txt-paragraph_heading {
+    padding-left: 1rem;
+    border-left: 1px solid color("secondary");
+    @include remCalc(font-size, 24);
+    @extend %txt-common-style;
+}

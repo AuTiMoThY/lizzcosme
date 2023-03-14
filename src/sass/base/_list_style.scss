@@ -1,0 +1,17 @@
+.list_style {
+    &-2 {
+        @extend .lis-n;
+        &-item {
+            position: relative;
+            padding-left: 1rem;
+
+            &:before {
+                @include psudoClass;
+                @include absolute(12, $L:0);
+                transform: rotate(45deg);
+                @include wh(4);
+                background-color: #63E3D4;
+            }
+        }
+    }
+}

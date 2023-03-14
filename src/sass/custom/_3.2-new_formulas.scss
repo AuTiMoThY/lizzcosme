@@ -1,0 +1,30 @@
+.new_formulas {
+    &-inner {
+        position: relative;
+
+        .img_div {
+            @include rwdBlock(576, 400);
+            @extend %fit-content;
+        }
+
+        .content {
+            @include absolute($B:0, $L:0);
+            width: 100%;
+            min-height: 136px;
+            background-color: #FAF8F5;
+            padding: 24px;
+
+            @include media-down(md){
+                position: relative;
+            }
+        }
+
+    }
+
+    .service_article-block {
+
+        @include media-down(md){
+            margin-bottom: 1rem;
+        }
+    }
+}

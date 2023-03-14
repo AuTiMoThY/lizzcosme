@@ -1,0 +1,294 @@
+.page_footer {
+	background-color: #FAF8F5;
+	padding-bottom: 40px;
+
+
+	&-top {
+		display: grid;
+		grid-template-columns: percentage(453 / 1175) percentage(490 / 1175) percentage((1175 - 453 - 490) / 1175);
+		padding: 40px 0;
+
+		&-left {
+
+		}
+		&-middle {
+			border-left: 1px solid rgba(color("secondary"), 0.1);
+		}
+		&-right {
+			border-left: 1px solid rgba(color("secondary"), 0.1);
+		}
+
+		@include media-down(md) {
+			// grid-template-columns: 1fr;
+			display: flex;
+
+			&-left {
+				// grid-column: span 1;
+				// grid-row: 1 / 2;
+				flex: 0 0 100%;
+
+				margin-bottom: 1.8rem;
+			}
+			&-middle {
+				// grid-column: 1 / 2;
+				// grid-row: 2 / 3;
+				flex: 1 1 66.66%;
+
+				margin-bottom: 1.8rem;
+				border-left: none;
+			}
+			&-right {
+				// grid-column: 1 / 2;
+				// grid-row: 2 / 3;
+				flex: 1 1 33.33%;
+				// border-left: none;
+			}
+		}
+
+		@include media-down(sm) {
+			&-middle, &-right {
+				flex: 1 1 100%;
+			}
+
+			&-right {
+				border-left: none;
+			}
+		}
+	}
+
+	&-bottom {
+		border-top: 1px solid rgba(color("secondary"), 0.1);
+		padding-top: 8px;
+	}
+}
+
+
+
+.lizz_info {
+	color: color("secondary");
+
+	@include media-down(md) {
+		// display: flex;
+	}
+	&-logo {
+		@include wh(100%, 90);
+		max-width: 322px;
+		margin-bottom: 24px;
+
+		.img_div {
+			@include rwdBlock(322, 90);
+			background-color: transparent;
+		}
+	}
+
+	&-contact {
+
+		@include media-down(md) {
+			// display: flex;
+			// flex-wrap: wrap;
+			// justify-content: flex-end;
+		}
+		.social {
+			display: flex;
+			&-item {
+				&:first-of-type {
+					margin-right: 1rem;
+				}
+				> .inner {
+					position: relative;
+					display: block;
+					@include wh(24);
+					background-color: color("secondary");
+					box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+					transition: $transition-base;
+
+					&:hover {
+						background-color: darken($color: color("secondary"), $amount: 10);
+						box-shadow: $boxShadow-weak;
+					}
+
+				}
+
+				img {
+					@include absolute(50%, $L: 50%);
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+	}
+
+	// for wp
+	.widget {
+		&:not(:first-of-type) {
+			margin-top: 1rem;
+		}
+	}
+
+	.social {
+		// for wp
+		.menu {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			@extend .cf;
+
+			&-item {
+				float: left;
+				&:not(:first-of-type) {
+					margin-left: 1rem;
+				}
+
+				a {
+					position: relative;
+					display: block;
+					@include wh(24);
+					background-color: color("secondary");
+					box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+					transition: $transition-base;
+
+					&:hover {
+						background-color: darken($color: color("secondary"), $amount: 10);
+						box-shadow: $boxShadow-weak;
+					}
+
+				}
+
+				img {
+					@include absolute(50%, $L: 50%);
+					transform: translate(-50%, -50%);
+
+					max-width: 16px;
+					max-height: 16px;
+
+					+ span {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+%itemCommonStyle {
+	margin-bottom: 1rem;
+
+	@include media-down(md) {
+		display: flex;
+		align-item: center;
+		justify-content: center;
+	}
+	a {
+		opacity: 0.5;
+		color: currentColor;
+
+		@include hover_line(2, color("secondary"));
+	}
+
+	&:hover {
+		a {
+			opacity: 1;
+		}
+	}
+}
+
+
+.quick_link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+	.heading {
+		margin-bottom: 40px;
+		font-weight: 100;
+		@include remCalc(font-size, 24);
+		letter-spacing: 2px;
+	}
+
+	.footer_nav {
+		ul {
+			width: percentage(229 / 490);
+			min-width: 260px;
+			margin: auto;
+			display: flex;
+			flex-wrap: wrap;
+
+			@include media-down(md) {
+				width: auto;
+			}
+		}
+		&-item {
+			flex: 1 1 50%;
+			// color: ;
+			a {
+				// color: currentColor;
+			}
+		}
+	}
+
+	// for wp
+	.menu {
+		width: percentage(229 / 490);
+		min-width: 260px;
+		margin: auto;
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		padding: 0;
+
+		@include media-down(md) {
+			width: auto;
+		}
+
+		&-item {
+			flex: 1 1 50%;
+			@extend %itemCommonStyle;
+		}
+	}
+}
+
+.other_link {
+	display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+	.heading {
+		margin-bottom: 40px;
+		font-weight: 100;
+		@include remCalc(font-size, 24);
+		letter-spacing: 2px;
+	}
+
+	@include media-down(md) {
+		align-items: center;
+	}
+
+	// for wp
+	.menu {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		&-item {
+			@extend %itemCommonStyle;
+		}
+	}
+}
+
+.footer_nav {
+	ul {
+
+	}
+	&-item {
+		@extend %itemCommonStyle;
+	}
+}
+
+.copyright {
+	opacity: 0.5;
+
+	@include remCalc(font-size, 14);
+	letter-spacing: 2px;
+}

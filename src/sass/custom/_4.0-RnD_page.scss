@@ -1,0 +1,41 @@
+.RnD_article {
+
+    .article-top {
+        padding-bottom: 104px;
+        @include media-down(md) {
+            padding-bottom: 4rem;
+        }
+        @include media-down(sm) {
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+.rnd_list {
+    padding-top: 104px;
+}
+
+.rnd_item {
+    margin-bottom: 40px;
+    &-inner {
+        height: 100%;
+        padding: 1.5rem;
+        background-color: #FAF8F5;
+    }
+
+    &-heading {
+        margin-bottom: 0;
+        border-bottom: 1px solid rgba(color("secondary"), 0.2);
+        font-size: 1.5rem;
+        font-weight: 100;
+        color: #1A1A1A;
+    }
+}
+
+.rnd_sublist {
+    &-item {
+        padding-top: 1.5rem;
+
+        @include remCalc(font-size, 14)
+    }
+}

@@ -1,0 +1,100 @@
+extends _layout.pug
+block vars
+	- var page_class = "service_page experience";
+	- var page_title = "試用體驗包";
+
+
+block page_pluginStyle
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// .page_section.page_main-hd  START
+		section.page_section.page_main-hd
+			.page_main-hd-inner.text-center
+				h2.title #{page_title}
+				.lizz_breadcrumb
+					ul.cf.lis-n
+						li.lizz_breadcrumb-item
+							a(href="./").inner 首頁
+						li.lizz_breadcrumb-item.current
+							.arrow /
+							a(href="javascript:;").inner #{page_title}
+		// section.page_section.page_main-hd  END  !!
+		// =========================================================================
+		// article.page_section.page_main-bd  START
+		article.page_section.page_main-bd.service_article
+			.container
+				section.main_section.service_article-top.experience_article-top
+					.row
+						.col-md-4
+							.service_article-top-pic.img-style1
+								.img_div
+									img(src="./public/images/services/service9.jpg")
+						.col-md-7.offset-md-1.d-flex
+							.service_article-top-content.mask_article-top-content.align-self-center
+								.txt_block
+									ol.lis-n
+										li.experience_article-item 接觸原料採用316不銹鋼機台，化妝品級自動化連續無菌充填樣品包裝機台。
+										li.experience_article-item 自動斷料裝置，內料不殘留。
+										li.experience_article-item 封口緊密美觀，化妝品等級，不易破損。
+										li.experience_article-item 日期印製一體成型，無菌包裝方式。
+										li.experience_article-item 充填輛自2ml - 10ml 皆可充填。
+										li.experience_article-item SO22716符合衛生法規標準，專業試用包填充，封口一體成型。
+				// section.main_section.service_article-top  END  !!
+				section.main_section.service_article-section.be_applicable
+					h3.main_section-heading 適用劑型
+					.row
+						.col-md-4.service_article-block
+							.be_applicable-inner
+								.icon
+									img(src=PATH_IMG + "icons/icon-essential-oil.svg")
+								p.txt 精油
+
+						.col-md-4.service_article-block
+							.be_applicable-inner
+								.icon
+									img(src=PATH_IMG + "icons/icon-face-cleanser.svg")
+								p.txt 精華液
+						.col-md-4.service_article-block
+							.be_applicable-inner
+								.icon
+									img(src=PATH_IMG + "icons/icon-makeup-remover.svg")
+								p.txt 化妝水
+						.col-md-4.service_article-block
+							.be_applicable-inner
+								.icon
+									img(src=PATH_IMG + "icons/icon-conditioner.svg")
+								p.txt 乳液
+						.col-md-4.service_article-block
+							.be_applicable-inner
+								.icon
+									img(src=PATH_IMG + "icons/icon-moisturizer.svg")
+								p.txt 乳霜
+						.col-md-4.service_article-block
+							.be_applicable-inner
+								.icon
+									img(src=PATH_IMG + "icons/icon-shampoo.svg")
+								p.txt 洗髮精
+						.col-md-4.service_article-block
+							.be_applicable-inner
+								.icon
+									img(src=PATH_IMG + "icons/icon-lotion.svg")
+								p.txt 沐浴乳
+						.col-md-4.service_article-block
+							.be_applicable-inner
+								.icon
+									img(src=PATH_IMG + "icons/icon-eye-cream.svg")
+								p.txt 洗面乳試用包
+
+				// section.main_section.service_article-top  END  !!
+		// article.page_section.page_main-bd  END  !!
+
+
+
+block page_script
+	script(src="./public/js/page/service.js?v=" + version)
+

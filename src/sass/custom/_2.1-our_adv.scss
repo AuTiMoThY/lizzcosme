@@ -1,0 +1,56 @@
+.our_adv {
+
+    &-compare {
+        .icon {
+            @include wh(56);
+        }
+
+        &-list {
+            @include cf;
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+        &-item {
+            float: left;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-bottom: 40px;
+
+            .compare1 & {
+                width: 50%;
+
+                @include media-down(md) {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+    &-hd {
+        padding-bottom: 40px;
+
+        @include media-down(md) {
+            padding-bottom: 0;
+        }
+    }
+
+    &-bd {
+        .about_article & {
+            &.main_section {
+                // padding-bottom: 104px - 40;
+            }
+        }
+        &-heading {
+            padding-bottom: 1rem;
+            margin-bottom: 42px;
+            .compare1 & {
+                border-bottom: 1px solid color("brand");
+            }
+            .compare2 & {
+                border-bottom: 1px solid color("grey5");
+            }
+
+        }
+    }
+}

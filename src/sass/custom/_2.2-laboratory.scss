@@ -1,0 +1,48 @@
+.laboratory {
+    &-hr {
+        @include wh(100%, 1);
+        // margin: 104px 0;
+        background-color: color("grey6");
+    }
+
+    &-hd {
+        padding-bottom: 184px;
+
+        @include media-down(md) {
+            padding-bottom: 5rem;
+        }
+
+        @include media-down(sm) {
+            padding-bottom: 3rem;
+        }
+    }
+}
+
+.laboratory_item {
+    // height: 282px;
+    background-color: #FAF8F5;
+
+    &:not(:first-of-type) {
+        margin-top: 1.5rem;
+    }
+    .icon {
+        @include wh(50);
+        margin-bottom: 1.5rem;
+    }
+
+    &-content {
+        .laboratory_item & {
+            padding: 40px;
+        }
+
+        &-txt {
+            margin-bottom: 0;
+        }
+    }
+
+    &-img {
+        .img_div {
+            @include rwdBlock(376, 282);
+        }
+    }
+}

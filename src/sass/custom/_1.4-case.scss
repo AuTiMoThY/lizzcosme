@@ -1,0 +1,37 @@
+.case {
+    .page_section-cnt {
+        float: right;
+
+        width: percentage((1108 / 1440));
+
+        @include media-down(sm) {
+            width: 100%;
+            float: none;
+        }
+    }
+}
+
+.case_list {
+    width: 100%;
+    overflow: hidden;
+    // overflow: auto;
+
+    padding-bottom: 24px;
+    border-bottom: 1px solid color("secondary");
+
+    ul {
+        width: auto;
+        height: 176px;
+    }
+}
+.case_item {
+    &.case_item {
+        float: left;
+        @include wh(176);
+    }
+
+    .img_div {
+        @include wh(176);
+        padding-bottom: 0;
+    }
+}

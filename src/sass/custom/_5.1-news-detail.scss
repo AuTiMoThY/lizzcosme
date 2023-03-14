@@ -1,0 +1,21 @@
+.news-detail-ft {
+    // display: flex;
+    border-top: 1px solid color("secondary");
+    padding-top: 40px;
+}
+
+.recommend_list {
+
+}
+
+.recommend_item {
+
+    @include media-down(md){
+        margin-bottom: 1rem;
+    }
+
+    .news_card {
+        background-color: #fff;
+    }
+
+}

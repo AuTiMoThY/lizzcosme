@@ -1,0 +1,33 @@
+.#{$project_name}_breadcrumb {
+	display: flex;
+	justify-content: center;
+	ul {
+	}
+	&-item {
+		float: left;
+		display: flex;
+		align-items: center;
+		color: color("secondary");
+		letter-spacing: 2px;
+
+		.inner {
+			color: currentColor;
+		}
+
+		&.current {
+			color: color("secondary");
+
+			.inner {
+
+			}
+		}
+
+		&:hover {
+			color: color("secondary");
+		}
+	}
+
+	.arrow-svg {
+		
+	}
+}

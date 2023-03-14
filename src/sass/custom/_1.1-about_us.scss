@@ -1,0 +1,193 @@
+.about_us {
+    &-article {
+        display                 : grid;
+        // grid-template-columns: percentage((682 + 23) / 976) percentage((976 - (682 + 23)) / 976);
+        // grid-template-areas: "content photo";
+
+        grid-template-columns : [start] 95px [col1] auto [col2] 271px [end];
+        // grid-template-rows    : [row] auto [row] auto [row] auto [row];
+        // grid-template-areas:
+        //     "title title photo"
+        //     "cnt cnt photo"
+        //     "more signature photo";
+        @include media-down(md) {
+            grid-template-columns: [start] 95px [col1] calc((100% - 95px) / 2) [col2] calc((100% - 95px) / 2) [end];
+        }
+
+        .subtitle {
+            // grid-area: title;
+            grid-column: start / col2;
+            grid-row   : 1 / 2;
+
+            @include media-down(lg) {
+                grid-column: start / end;
+                grid-row   : 1 / 2;
+            }
+
+            @include media-down(900px) {
+
+            }
+        }
+
+        .content {
+            // grid-area: cnt;
+            grid-column: start / col2;
+            grid-row   : 2 / 3;
+
+            @include media-down(md) {
+                grid-column: start / end;
+            }
+        }
+
+        .more_link {
+            // grid-area: more;
+            grid-column: start / col1;
+            grid-row   : 3 / 4;
+            @include media-down(900px) {
+                grid-column: start / col1;
+            }
+
+            @include media-down(md) {
+                grid-column: start / end;
+            }
+        }
+        .signature {
+            // grid-area: signature;
+            grid-column: col1 / col2;
+            grid-row   : 3 / 4;
+
+            @include media-down(900px) {
+                grid-column: col1 / end;
+                // grid-row   : 4 / 5;
+            }
+            @include media-down(md) {
+                grid-column: start / col2;
+                grid-row   : 4 / 5;
+            }
+
+            @include media-down(sm) {
+                grid-column: start / end;
+                grid-row: 5 / 6;
+            };
+        }
+        .photo {
+            // grid-area: photo;
+            grid-column: col2 / end;
+            grid-row   : 1 / span 3;
+
+            @include media-down(lg) {
+                grid-column: col2 / end;
+                grid-row   : 2 / 3;
+            }
+
+            @include media-down(md) {
+                // grid-column: start / end;
+                grid-row   : 4 / 5;
+            }
+
+            @include media-down(sm) {
+                grid-column: col1 / end;
+            }
+            // @include media-down(900px) {
+            //     grid-column: start / end;
+            //     grid-row   : 3 / 4;
+            // }
+        }
+
+
+
+
+        .subtitle {
+            padding-right: 1.5rem;
+            margin-bottom: 40px;
+            text-indent: -16px;
+
+            @include media-down(lg) {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .content {
+            padding-right: 2.5rem;
+            // padding-right: 1.5rem;
+            margin-bottom: 40px;
+
+            @include media-down(lg) {
+                margin-bottom: 2rem;
+            }
+
+            @include media-down(md) {
+                margin-bottom: 0;
+                padding-right: 0;
+            }
+        }
+
+        .more_link {
+            display    : flex;
+            align-items: center;
+        }
+
+        .signature {
+            padding-right: 1.5rem;
+
+            display        : flex;
+            align-items    : center;
+            justify-content: flex-end;
+
+            @include media-down(md) {
+                align-items: flex-end;
+                // flex-direction: row;
+            }
+
+            &-pic {
+                width: 156px;
+            }
+
+            .img_div {
+                @include rwdBlock(156, 54);
+                background-color: transparent;
+            }
+        }
+
+        .photo {
+            .img_div {
+                @include rwdBlock(271, 366);
+            }
+        }
+
+        // .content {
+        //     position: relative;
+        //     grid-area: content;
+
+        //     &-hd {
+        //         margin-bottom: 40px;
+        //     }
+        //     &-bd {
+        //         margin-bottom: 40px;
+        //     }
+        //     &-ft {
+        //         display: flex;
+        //         justify-content: space-between;
+        //     }
+        // }
+
+        // .photo {
+        //     grid-area: photo;
+        // }
+        // .subtitle {
+        //     margin-bottom: 0;
+        // }
+
+        .txt {}
+
+        .lizz_link {}
+
+        .signature {
+
+            // @include absolute();
+        }
+
+
+    }
+}

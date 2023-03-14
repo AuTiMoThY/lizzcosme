@@ -1,0 +1,114 @@
+doctype html
+html(class="" lang="zh-Hant")
+	- var current_active = "";
+	- var version = "20210625";
+	- var is_login = 0;
+	- var PATH_IMG = "public/images/";
+	- var page_class = "";
+	- var page_title = "";
+	- var web_name = "儷氏化粧品";
+	block vars
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		block title
+			title #{page_title} | #{web_name}
+		meta(name="keywords", content="")
+		meta(name="description", content="")
+		meta(name="robots", content="index,follow")
+		meta(name="viewport", content="width=device-width, user-scalable=no")
+
+		// 讓手機不判斷它是電話號碼變顏色
+		meta(name="format-detection", content="telephone=no")
+
+		//- include _favicon.html
+		//- // Font Awesome
+		//- script(src="public/fontawesome/js/all.js", defer)
+
+		block page_pluginStyle
+
+		//- // style
+		//- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+
+		//- link(rel="stylesheet", href="https://csshake.surge.sh/csshake.min.css")
+		//- link(rel="stylesheet", href="public/plugins/fullpage/fullpage.css")
+		//- link(rel="stylesheet", href="public/plugins/simplebar/simplebar.css")
+		link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+		//- link(rel="stylesheet", href="public/plugins/mCustomScrollbar/jquery.mCustomScrollbar.min.css")
+
+		//- link(rel="stylesheet", href="public/css/animate.css")
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+		link(rel="stylesheet", href="public/css/style.css?v=" + version)
+
+		// js
+		script(src="public/js/libs/modernizr-custom.min.js")
+		script(src="public/js/ModernizrAu.js")
+		//- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue@next"></script>
+
+
+	body
+		//- // =========================================================================
+		//- // SVG sprites  START
+		//- .symbols_svg.d-none
+		//- 	//
+		//- 	//- include ../symbol/svg/sprite.symbol.svg
+		//- // SVG sprites  END  !!
+		//- // =========================================================================
+		#top.body-top
+		#goTop.btn-go_top
+			a(href="#top").btn-go_top-inner
+				.svgicon
+					<svg viewBox="0 0 26 12">
+					<polyline stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="1,11 13,1 25,11"/>
+					</svg>
+
+
+		// =========================================================================
+		// .body_wrap  START
+		.body_wrap
+			include _header.pug
+			// =========================================================================
+			// 頁面內容  START
+			// =========================================================================
+			block content
+			// =========================================================================
+			// 頁面內容  END  !!
+			// =========================================================================
+			include _footer.pug
+			.web_flower
+		//- // =========================================================================
+		//- // 彈出視窗 / 通知
+		//- // =========================================================================
+		block popup
+
+
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script window.jQuery || document.write('<script src="public/js/libs/jquery.min.js"><\/script>')
+		//-
+
+		//- script(src="https://unpkg.com/vue@next")
+		script(src="public/js/libs/plugin_mix.js")
+		//- script(src="public/plugin/autosize.min.js")
+		//- script(src="public/plugin/multiple-select.js")
+
+		//- 動態效果
+		//- script(src="public/plugins/gsap/gsap.min.js")
+		//- script(src="public/plugins/scrollmagic/ScrollMagic.min.js")
+		//- script(src="public/plugins/scrollmagic/plugins/jquery.ScrollMagic.min.js")
+		//- script(src="public/plugins/scrollmagic/plugins/debug.addIndicators.min.js")
+		//- script(src="public/plugins/scrollmagic/plugins/animation.gsap.min.js")
+		script(src="public/plugins/snap.svg-min.js")
+
+		//- script(src="public/plugins/fullpage/fullpage.js")
+		//- script(src="public/plugins/simplebar/simplebar.js")
+		//- script(src="public/plugins/fullpage/fullpage.extensions.min.js")
+		script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+		//- script(src="public/plugins/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js")
+		//- script(src="public/plugins/html2canvas.js")
+		script(src="public/js/script.js?v=" + version)
+		block page_script

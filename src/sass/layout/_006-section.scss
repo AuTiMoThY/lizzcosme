@@ -1,0 +1,70 @@
+.page_section {
+	> .container {
+		.index_page & {
+			position: relative;
+			display: flex;
+			justify-content: flex-end;
+
+			@include media-down(sm) {
+				display: block;
+			}
+		}
+	}
+	&-heading {
+
+	}
+
+	&-cnt {
+		width: percentage(976 / 1176);
+
+		@include media-down(sm) {
+			width: 100%;
+		}
+	}
+}
+
+.page_section {
+	&.banner {
+		padding-bottom: 72px;
+	}
+	&.about_us {
+		padding-bottom: 104px;
+	}
+	&.advantage {
+		padding-bottom: 106px;
+	}
+	&.service {
+		padding-bottom: 104px;
+	}
+	&.case {
+		padding-bottom: 104px;
+	}
+	&.lizz_laboratory {
+		padding-bottom: 104px;
+	}
+	&.news {
+		// margin-bottom: 40px;
+	}
+	&.contact {
+		padding-bottom: 104px;
+	}
+
+	// .about_page & {
+	// 	padding-top: 104px;
+	// 	padding-bottom: 40px;
+	// }
+}
+
+.main_section {
+	&:not(:first-of-type) {
+		padding-top: 104px;
+
+		@include media-down(md) {
+			padding-top: 4.5rem;
+		}
+		@include media-down(sm) {
+			padding-top: 2.5rem;
+		}
+	}
+}
+

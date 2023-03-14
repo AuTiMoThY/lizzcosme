@@ -1,0 +1,375 @@
+extends _layout.pug
+block vars
+	- var page_class = "index_page";
+	- var page_title = "首頁";
+
+
+block page_pluginStyle
+	//- link(rel="stylesheet" href="dist/plugin/swiper/swiper.min.css")
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// .page_section.banner  START
+		section.page_section.banner
+			.swiper-container.banner-swiper
+				ul.lis-n.swiper-wrapper
+					li.banner-slide.swiper-slide
+						.banner-slide-inner
+							.banner-slide-txt
+								hgroup
+									h2.slogan 我們是儷氏
+										.slogan-shadow 我們是儷氏
+									h3.subSlogan 提供專業的美容保養、清潔用品研發生產及代工
+									a(href="about.html").lizz_link.more 了解更多
+							.banner-slide-img
+								.img_div
+									img(src=PATH_IMG + "banner-img.jpg")
+								.banner-slide-img-bg
+							.banner-slide-lizz LIZZ
+							.provide 圖片提供 : Pinkoi
+					li.banner-slide.swiper-slide
+						.banner-slide-inner
+							.banner-slide-txt
+								hgroup
+									h2.slogan 我們是儷氏
+										.slogan-shadow 我們是儷氏
+									h3.subSlogan 提供專業的美容保養、清潔用品研發生產及代工
+									a(href="about.html").lizz_link.more 了解更多
+							.banner-slide-img(data-swiper-parallax="-23%")
+								.img_div
+									img(src=PATH_IMG + "banner-img.jpg")
+								.banner-slide-img-bg
+							.banner-slide-lizz LIZZ
+							.provide 圖片提供 : Pinkoi
+
+				.banner-swiper-ctrl
+					.swiper-button-prev.banner-swiper-prev
+					.swiper-button-next.banner-swiper-next
+		// .page_section.banner  END  !!
+
+		// =========================================================================
+		// .page_section.about_us  START
+		// 關於我們
+		section.page_section.about_us
+			.container
+				h2.page_section-heading 關於我們
+				.page_section-cnt
+					article.about_us-article
+						h3.subtitle.txt-h3 「對於品質，我們總想得比別人多一些。」
+						.content
+							p.txt 儷氏成立至今超過20年了。<br>承襲當初創辦儷氏的父母對於保養產業的期待與專業技術，儷氏已成為少數順利由第二代接手轉型的成功實例。<br>這些年來我們走過政治、社會、經濟的極大變遷，而這些考驗都沒有將儷氏擊倒。我們希望藉由這份堅毅，體現在研發與製程上，持續提供讓客戶滿意的服務。
+							p.txt 信賴是企業重要的資產，所以我們對於品質的要求極為謹慎。領先業界採用歐盟檢驗標準、一系列的品質管理，都是儷氏對客戶的保障與用心。
+						.more_link
+							a(href="javascript:;", title="了解更多").lizz_link 了解更多
+						.signature
+							.title 行銷經理
+							.signature-pic
+								.img_div
+									img(src=PATH_IMG + "signature.png")
+						.photo
+							.img_div
+								img(src=PATH_IMG + "marketing_manager.jpg")
+						//- .content
+						//- 	.content-hd
+						//- 		h3.subtitle.txt-h3 「對於品質，我們總想得比別人多一些。」
+						//- 	.content-bd
+						//- 		p.txt 儷氏成立至今超過20年了。<br>承襲當初創辦儷氏的父母對於保養產業的期待與專業技術，儷氏已成為少數順利由第二代接手轉型的成功實例。<br>這些年來我們走過政治、社會、經濟的極大變遷，而這些考驗都沒有將儷氏擊倒。我們希望藉由這份堅毅，體現在研發與製程上，持續提供讓客戶滿意的服務。
+						//- 		p.txt 信賴是企業重要的資產，所以我們對於品質的要求極為謹慎。領先業界採用歐盟檢驗標準、一系列的品質管理，都是儷氏對客戶的保障與用心。
+						//- 	.content-ft
+						//- 		a(href="javascript:;", title="了解更多").lizz_link 了解更多
+						//- 		.signature
+						//- 			.title 行銷經理
+						//- 			._img_div
+						//- 				img(src=PATH_IMG + "signature.png")
+						//- .photo
+						//- 	._img_div
+						//- 		img(src=PATH_IMG + "marketing_manager.jpg")
+		// .page_section.about_us  END  !!
+
+		// =========================================================================
+		// .page_section.advantage  START
+		// 我們的優勢
+		section.page_section.advantage
+			.container
+				h2.page_section-heading 我們的優勢
+				.page_section-cnt
+					.advantage_list
+						ul.lis-n.cf
+							li.advantage_item
+								.icon.svgicon
+									include ../svg/icon-adv1.svg
+								.txt 客製化配方設計
+							li.advantage_item
+								.icon.svgicon
+									include ../svg/icon-adv2.svg
+								.txt 熱銷市場配方仿樣
+							li.advantage_item
+								.icon.svgicon
+									include ../svg/icon-adv3.svg
+								.txt 教育訓練/產品諮詢
+							li.advantage_item
+								.icon.svgicon
+									include ../svg/icon-adv4.svg
+								.txt 專業協力廠名單推薦
+		// .page_section.advantage  END  !!
+
+		// =========================================================================
+		// .page_section.service  START
+		// 服務項目
+		section.page_section.service
+			.container
+				h2.page_section-heading 服務項目
+				.page_section-cnt
+					.service_list
+						ul.lis-n
+							li.service_item
+								.service_item-inner
+									h3.title 免費代工諮詢
+									.cnt
+										p.txt [簡短的介紹文案] 在非洲，每五分鐘，就有三百秒過去。每呼吸60秒，就會減少一分鐘的壽命。
+										a(href="javascript:;" alt="了解更多").lizz_link 了解更多
+									.img_div
+										img(src=PATH_IMG + "services/service1.jpg", alt="免費代工諮詢")
+							li.service_item
+								.service_item-inner
+									h3.title 配方設計
+									.cnt
+										p.txt [簡短的介紹文案] 在非洲，每五分鐘，就有三百秒過去。每呼吸60秒，就會減少一分鐘的壽命。
+										a(href="javascript:;" alt="了解更多").lizz_link 了解更多
+									.img_div
+										img(src=PATH_IMG + "services/service2.jpg", alt="配方設計")
+							li.service_item
+								.service_item-inner
+									h3.title 面膜生產
+									.cnt
+										p.txt [簡短的介紹文案] 在非洲，每五分鐘，就有三百秒過去。每呼吸60秒，就會減少一分鐘的壽命。
+										a(href="javascript:;" alt="了解更多").lizz_link 了解更多
+									.img_div
+										img(src=PATH_IMG + "services/service3.jpg", alt="面膜生產")
+							li.service_item
+								.service_item-inner
+									h3.title 體驗試用包
+									.cnt
+										p.txt [簡短的介紹文案] 在非洲，每五分鐘，就有三百秒過去。每呼吸60秒，就會減少一分鐘的壽命。每天省下一杯奶茶的錢，十天後你可以買十杯奶茶。
+										a(href="javascript:;" alt="了解更多").lizz_link 了解更多
+									.img_div
+										img(src=PATH_IMG + "services/service4.jpg", alt="體驗試用包")
+							li.service_item
+								.service_item-inner
+									h3.title 專業代工製造
+									.cnt
+										p.txt 考量行銷面、市場通路及預算成本，打造最適宜的產品配方組合。廠內既有劑型可供少量接單，並有搭配之包材廠可配合。
+										a(href="javascript:;" alt="了解更多").lizz_link 了解更多
+									.img_div
+										img(src=PATH_IMG + "services/service5.jpg", alt="專業代工製造")
+							li.service_item.qna
+								.service_item-inner
+									p.txt 有任何疑問嗎？
+									a(href="javascript:;" title="前往FAQ").lizz_link 前往FAQ
+		// .page_section.service  END  !!
+
+		// =========================================================================
+		// .page_section.case  START
+		// 業界實績
+		section.page_section.case.cf
+			.container
+				h2.page_section-heading 業界實績
+			.page_section-cnt
+				.case_list.swiper-container
+					ul.cf.lis-n.swiper-wrapper
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case1.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case2.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case3.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case4.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case5.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case6.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case7.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case8.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case9.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case10.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case11.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case12.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case13.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case14.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case15.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case16.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case17.jpg" alt="")
+						li.case_item.swiper-slide
+							.img_div
+								img(src=PATH_IMG + "case/case18.jpg" alt="")
+					.swiper-scrollbar
+		// .page_section.case  END  !!
+
+		// =========================================================================
+		// .page_section.lizz_laboratory  START
+		// 儷氏實驗室
+		section.page_section.lizz_laboratory.cf
+			.container
+				h2.page_section-heading 儷氏實驗室
+				.page_section-cnt
+					.lizz_laboratory_content
+						h3.subtitle.txt-h3 「嚴謹、技術、檢測。」
+						p.txt 本公司配方實驗室人員都是專業科系畢業之專業人員，結合知名原料廠商，所有商品經過安定性測試，提供客戶有品質保證的配方，並且配合生產團隊以ODM、OEM模式進行多元化客製，與合作夥伴客戶一同成長。
+						ul.lis-n.lizz_laboratory_list
+							li.lizz_laboratory_item
+								.icon
+									img(src="./public/images/laboratory/medical-report.svg")
+									//- include ../svg/laboratory/medical-report.svg
+								.txt 配方開發
+							li.lizz_laboratory_item
+								.icon
+									img(src="./public/images/laboratory/mass.svg")
+									//- include ../svg/laboratory/mass.svg
+								.txt 製程技術
+							li.lizz_laboratory_item
+								.icon
+									img(src="./public/images/laboratory/safe.svg")
+									//- include ../svg/laboratory/safe.svg
+								.txt 安全有效
+							li.lizz_laboratory_item
+								.icon
+									img(src="./public/images/laboratory/flowers.svg")
+									//- include ../svg/laboratory/flowers.svg
+								.txt 香氛設計
+							li.lizz_laboratory_item
+								.icon
+									img(src="./public/images/laboratory/dermis.svg")
+									//- include ../svg/laboratory/dermis.svg
+								.txt 皮膚檢測
+							li.lizz_laboratory_item
+								a(href="javascript:;", alt="了解更多").lizz_link 了解更多
+			.lizz_laboratory_pic.swiper-container
+				ul.cf.lis-n.swiper-wrapper
+					li.lizz_laboratory_pic_item.swiper-slide
+						.img_div
+							img(src=PATH_IMG + "laboratory/laboratory1.jpg")
+					li.lizz_laboratory_pic_item.swiper-slide
+						.img_div
+							img(src=PATH_IMG + "laboratory/laboratory2.jpg")
+					li.lizz_laboratory_pic_item.swiper-slide
+						.img_div
+							img(src=PATH_IMG + "laboratory/laboratory3.jpg")
+					li.lizz_laboratory_pic_item.swiper-slide
+						.img_div
+							img(src=PATH_IMG + "laboratory/laboratory4.jpg")
+					li.lizz_laboratory_pic_item.swiper-slide
+						.img_div
+							img(src=PATH_IMG + "laboratory/laboratory5.jpg")
+				.swiper-scrollbar
+		// .page_section.lizz_laboratory  END  !!
+
+		// =========================================================================
+		// .page_section.news  START
+		// 產業新訊
+		section.page_section.news
+			.container
+				h2.page_section-heading 產業新訊
+				.page_section-cnt
+					#newsList.news_list_wrapper
+						.news_card(v-for="item in list",
+						v-bind:data-id="item.id",
+						v-bind:data-pic="item.pic",
+						v-bind:data-tag="item.tag",
+						v-bind:data-time="item.time",
+						v-bind:data-title="item.title",
+						v-bind:data-brief="item.brief",
+						)
+							.inner
+								.news_card-pic
+									.news-pic.img_div
+										img(v-bind:src="item.pic")
+								.news_card-content.news-content
+									.news-content-hd
+										.news-tag
+											.icon.svgicon
+												include ../svg/icon-tag.svg
+											.txt {{ item.tag }}
+										.news-time
+											.icon.svgicon
+												include ../svg/icon-time.svg
+											.txt {{ item.time }}
+									.news-content-bd
+										.news-title {{ item.title }}
+										.news-brief {{ item.brief }}
+									.news-content-ft
+										a(href="javascript:;").lizz_link.news-link 閱讀全文
+						.news_list
+							ul.lis-n
+								li.news_item(v-for="item in list",
+								v-bind:data-id="item.id",
+								v-bind:data-pic="item.pic",
+								v-bind:data-tag="item.tag",
+								v-bind:data-time="item.time",
+								v-bind:data-title="item.title",
+								v-bind:data-brief="item.brief",
+								)
+									.news_item-content.news-content
+										.news-content-hd
+											.news-tag
+												.icon.svgicon
+													include ../svg/icon-tag.svg
+												.txt {{ item.tag }}
+											.news-time
+												.icon.svgicon
+													include ../svg/icon-time.svg
+												.txt {{ item.time }}
+										.news-content-bd
+											.news_item-txt.news-brief {{ item.title }}
+							.news_list-more
+								a(href="javascript:;").lizz_link 瀏覽所有文章
+						// .news_list  END  !!
+					.swiper-scrollbar
+		// .page_section.news  END  !!
+
+		// =========================================================================
+		// .page_section.contact  START
+		section.page_section.contact
+			.container
+				h2.contact-heading 您有代工上的需求疑問嗎?
+				p.contact-txt 歡迎向我們免費諮詢
+				a(href="javascript:;").lizz_btn.lizz_btn-default 聯繫我們
+		// .page_section.contact  END  !!
+		//   END  !!
+
+
+block page_script
+	script(src="public/js/page/index.js?v=" + version)
+

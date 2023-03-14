@@ -1,0 +1,35 @@
+.page_main {
+    &-hd {
+        height: 275px;
+        background-image: url(../images/bg/page_main-hd.png);
+        background-position: center center;
+        background-repeat: repeat;
+        padding-top: 135px;
+
+        display: flex;
+        justify-content: center;
+
+        &-inner {
+            // display: flex;
+            // justify-content: center;
+            // flex-direction: column;
+        }
+
+        .title {
+            margin-bottom: 1rem;
+
+            font-weight: 100;
+            letter-spacing: 2px;
+            @include remCalc(font-size, 38);
+        }
+    }
+
+    &-bd {
+        padding: 104px 0;
+
+        @include media-down(md) {
+            padding: 4rem 0;
+        }
+    }
+
+}

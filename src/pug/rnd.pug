@@ -1,0 +1,59 @@
+extends _layout.pug
+block vars
+	- var page_class = "RnD_page";
+	- var page_title = "研發品項";
+
+
+block page_pluginStyle
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// .page_section.page_main-hd  START
+		section.page_section.page_main-hd
+			.page_main-hd-inner.text-center
+				h2.title #{page_title}
+				.lizz_breadcrumb
+					ul.cf.lis-n
+						li.lizz_breadcrumb-item
+							a(href="./").inner 首頁
+						li.lizz_breadcrumb-item.current
+							.arrow /
+							a(href="javascript:;").inner #{page_title}
+		// section.page_section.page_main-hd  END  !!
+		// =========================================================================
+		// article.page_section.page_main-bd  START
+		article.page_section.page_main-bd.RnD_article
+			.container
+				section.main_section.article-top
+					.row
+						.col-md-4
+							.article-pic.img-style1
+								.img_div
+									img(src=PATH_IMG + "rnd/rnd1.jpg")
+						.col-md-7.offset-md-1.d-flex
+							.article-content.align-self-center
+								.txt_block
+									p.txt 儷氏具有良好的作業環境及符合標準的品質控管，引進各式生產設備可大量製造及包裝各式產品。
+									p.txt 提供專業的OEM & ODM 代工服務，並以合理的價格、優良的品質及快速的貨物交期為業主服務。此外，產品的需求，從設計、製造、生產到包裝，都能以過去20年的經驗協助客戶自創品牌並開發市場。
+									p.txt 產品的開發族繁不及備載，歡迎與我們聯繫討論，客製開發您的需求。
+									.big_txt 研發品項
+				section.main_section.rnd_list
+					ul#RnDList.lis-n.row
+						li.rnd_item.col-6.col-md-4.col-lg-3.col-xl-2(v-for="val in list")
+							.rnd_item-inner
+								h3.rnd_item-heading {{ val.title }}
+								.rnd_sublist
+									ul.lis-n
+										li.rnd_sublist-item(v-for="subitem in val.subList")
+											| {{ subitem }}
+		// article.page_section.page_main-bd  END  !!
+
+
+
+block page_script
+	script(src="./public/js/page/rnd.js?v=" + version)
+

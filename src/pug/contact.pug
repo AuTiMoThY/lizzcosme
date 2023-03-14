@@ -1,0 +1,403 @@
+extends _layout.pug
+block vars
+	- var page_class = "contact_page";
+	- var page_title = "聯絡我們";
+
+
+block page_pluginStyle
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" integrity="sha512-YdYyWQf8AS4WSB0WWdc3FbQ3Ypdm0QCWD2k4hgfqbQbRCJBEgX0iAegkl2S1Evma5ImaVXLBeUkIlP6hQ1eYKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// .page_section.page_main-hd  START
+		section.page_section.page_main-hd
+			.page_main-hd-inner.text-center
+				h2.title #{page_title}
+				.lizz_breadcrumb
+					ul.cf.lis-n
+						li.lizz_breadcrumb-item
+							a(href="./").inner 首頁
+						li.lizz_breadcrumb-item.current
+							.arrow /
+							a(href="javascript:;").inner #{page_title}
+		// section.page_section.page_main-hd  END  !!
+		// =========================================================================
+		// main.page_section.page_main-bd  START
+		main.page_section.page_main-bd.contact_main
+			.container
+				section.main_section.contact_main-info
+					ul.lis-n.row
+						li.info_item.col-12.col-sm-6.col-lg-3
+							.info_item-inner
+								h3.heading.txt-h4.txt-2nd 電話
+								p.txt +886 2 2676 3333
+						li.info_item.col-12.col-sm-6.col-lg-3
+							.info_item-inner
+								h3.heading.txt-h4.txt-2nd 傳真
+								p.txt (02)2676-2222
+						li.info_item.col-12.col-sm-6.col-lg-3
+							.info_item-inner
+								h3.heading.txt-h4.txt-2nd E-mail
+								p.txt service@lizzcosme.com
+						li.info_item.col-12.col-sm-6.col-lg-3
+							.info_item-inner
+								h3.heading.txt-h4.txt-2nd 地址
+								p.txt  238035 新北市樹林區<br>忠信街12號5樓 (新加坡工業園區)
+				// section.main_section  END  !!
+				// 業務諮詢表 START ~~
+				section.main_section.contact_main-frm
+					.row
+						.contact_main-frm-intro.col-lg-3
+							h3.heading.txt-h3.txt-2nd 業務諮詢表
+							.content
+								p.txt 您有代工上的需求疑問嗎?<br>歡迎向我們免費諮詢
+								ul.content_list.list_style-2
+									li.content_item.list_style-2-item
+										| 營業時間<br>週一至週五 07:00 - 19:00
+						.contact_main-frm-block.col-lg-8.offset-lg-1
+							.contact_form.lizz_frm
+								form(action="").inner
+									.contact_form-name.form-group.required
+										label(for="").lizz_frm-label 姓名
+										.lizz_frm-field
+											input(type="txt" placeholder="請輸入您的姓名").lizz_frm-input.form-control
+									.contact_form-phone.form-group
+										label(for="").lizz_frm-label 電話
+										.lizz_frm-field
+											input(type="txt" placeholder="請輸入您的電話").lizz_frm-input.form-control
+									.contact_form-email.form-group.required
+										label(for="").lizz_frm-label E-mail
+										.lizz_frm-field
+											input(type="txt" placeholder="請輸入您的E-mail").lizz_frm-input.form-control
+									.contact_form-msg.form-group
+										label(for="").lizz_frm-label 您的訊息
+										.lizz_frm-field
+											textarea(placeholder="請輸入您的訊息").lizz_frm-textarea.form-control
+									.contact_form-btns
+										button(type="button").contact_form-btn.lizz_btn.lizz_btn-default 送出
+				// section.main_section  END  !!
+				section.main_section.contact_main-frm
+					.row
+						.contact_main-frm-intro.col-lg-3
+							h3.heading.txt-h3.txt-2nd 代工需求調查表
+							.content
+								p.txt 請填寫右方表格，讓我們能更快的提供您需要的服務，謝謝您
+								ul.content_list.list_style-2
+									li.content_item.list_style-2-item
+										| 依業主需求進行配方設計與打樣，為與客戶共創雙贏，每款產品打樣酌收新台幣兩千元，採精準打樣至多三次。若需求的產品原料特殊，將另酌收原料費。
+									li.content_item.list_style-2-item
+										| 確定量產，打樣費將直接扣抵貨款。
+									li.content_item.list_style-2-item
+										| 一般的量為10~50g，約7個工作天，原料取得時間需較久外之樣品除外，若有超出的大量需求可另行洽談。
+						.contact_main-frm-block.col-lg-8.offset-lg-1
+							.contact_form.lizz_frm
+								form(action="").inner
+									.contact_form-OEM_name.form-group.required
+										label(for="").lizz_frm-label 公司/申請人
+										.lizz_frm-field
+											input(type="txt" placeholder="請輸入您的公司名稱/您的姓名").lizz_frm-input.form-control
+									.contact_form-OEM_budget.form-group
+										label(for="").lizz_frm-label 預算
+										.lizz_frm-field.input-group
+											.input-group-prepend NT$
+											input(type="txt" placeholder="請輸入您的預算" value="2000").lizz_frm-input.form-control
+											.input-group-append /kg
+									.contact_form-OEM_date.form-group
+										label(for="").lizz_frm-label 需求日期
+										.lizz_frm-field.input-group
+											input(type="txt" placeholder="請輸入您的日期" value="1970/01/01" data-toggle="datepicker").lizz_frm-input.form-control
+											.input-group-append
+												.svgicon
+													<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M6 9H4V11H6V9ZM10 9H8V11H10V9ZM14 9H12V11H14V9ZM16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.9 0 4V18C0 18.5304 0.210714 19.0391 0.585786 19.4142C0.960859 19.7893 1.46957 20 2 20H16C16.5304 20 17.0391 19.7893 17.4142 19.4142C17.7893 19.0391 18 18.5304 18 18V4C18 3.46957 17.7893 2.96086 17.4142 2.58579C17.0391 2.21071 16.5304 2 16 2ZM16 18H2V7H16V18Z" fill="#72705B"/>
+													</svg>
+
+									.contact_form-OEM_type.form-group
+										label(for="").lizz_frm-label 劑型
+										.lizz_frm-field.OEM_type-list
+											ul.lis-n.d-flex
+												li.lizz_rcx.OEM_type-item
+													label(for="OEM-Type1").lizz_rcx-label
+														input(type="checkbox")#OEM-Type1.lizz_rcx-input
+														.choicemark
+														.txt 霜類
+												li.lizz_rcx.OEM_type-item
+													label(for="OEM-Type2").lizz_rcx-label
+														input(type="checkbox")#OEM-Type2.lizz_rcx-input
+														.choicemark
+														.txt 精華液
+												li.lizz_rcx.OEM_type-item
+													label(for="OEM-Type3").lizz_rcx-label
+														input(type="checkbox")#OEM-Type3.lizz_rcx-input
+														.choicemark
+														.txt 面膜
+												li.lizz_rcx.OEM_type-item
+													label(for="OEM-Type4").lizz_rcx-label
+														input(type="checkbox")#OEM-Type4.lizz_rcx-input
+														.choicemark
+														.txt 膠類
+												li.lizz_rcx.OEM_type-item
+													label(for="OEM-Type5").lizz_rcx-label
+														input(type="checkbox")#OEM-Type5.lizz_rcx-input
+														.choicemark
+														.txt 水類
+												li.lizz_rcx.OEM_type-item
+													label(for="OEM-Type6").lizz_rcx-label
+														input(type="checkbox")#OEM-Type6.lizz_rcx-input
+														.choicemark
+														.txt 乳液
+												li.lizz_rcx.OEM_type-item
+													label(for="OEM-Type7").lizz_rcx-label
+														input(type="checkbox")#OEM-Type7.lizz_rcx-input
+														.choicemark
+														.txt 油類
+												li.lizz_rcx.OEM_type-item
+													label(for="OEM-Type8").lizz_rcx-label
+														input(type="checkbox")#OEM-Type8.lizz_rcx-input
+														.choicemark
+														.txt 洗劑
+									.contact_form-OEM_feature.form-group
+										label(for="").lizz_frm-label 功能
+										.lizz_frm-field.OEM_feature-list
+											ul.lis-n.d-flex
+												li.lizz_rcx.OEM_feature-item
+													label(for="OEM-Feature1").lizz_rcx-label
+														input(type="checkbox")#OEM-Feature1.lizz_rcx-input
+														.choicemark
+														.txt 保養
+												li.lizz_rcx.OEM_feature-item
+													label(for="OEM-Feature2").lizz_rcx-label
+														input(type="checkbox")#OEM-Feature2.lizz_rcx-input
+														.choicemark
+														.txt 清潔
+												li.lizz_rcx.OEM_feature-item
+													label(for="OEM-Feature3").lizz_rcx-label
+														input(type="checkbox")#OEM-Feature3.lizz_rcx-input
+														.choicemark
+														.txt 去角質
+												li.lizz_rcx.OEM_feature-item
+													label(for="OEM-Feature4").lizz_rcx-label
+														input(type="checkbox")#OEM-Feature4.lizz_rcx-input
+														.choicemark
+														.txt 防曬
+												li.lizz_rcx.OEM_feature-item
+													label(for="OEM-Feature5").lizz_rcx-label
+														input(type="checkbox")#OEM-Feature5.lizz_rcx-input
+														.choicemark
+														.txt 面膜
+												li.lizz_rcx.OEM_feature-item
+													label(for="OEM-Feature6").lizz_rcx-label
+														input(type="checkbox")#OEM-Feature6.lizz_rcx-input
+														.choicemark
+														.txt 其他
+									.contact_form-OEM_effect.form-group
+										label(for="").lizz_frm-label 功效
+										.lizz_frm-field.OEM_effect-list
+											ul.lis-n.d-flex
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect1").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect1.lizz_rcx-input
+														.choicemark
+														.txt 收斂
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect2").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect2.lizz_rcx-input
+														.choicemark
+														.txt 緊實 卸妝 痘痘
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect3").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect3.lizz_rcx-input
+														.choicemark
+														.txt 控油
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect4").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect4.lizz_rcx-input
+														.choicemark
+														.txt 抑菌 去角質
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect5").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect5.lizz_rcx-input
+														.choicemark
+														.txt 控油
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect6").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect6.lizz_rcx-input
+														.choicemark
+														.txt 去疤 全效 抗敏
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect7").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect7.lizz_rcx-input
+														.choicemark
+														.txt 消炎 抗老化
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect8").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect8.lizz_rcx-input
+														.choicemark
+														.txt 除皺
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect9").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect9.lizz_rcx-input
+														.choicemark
+														.txt 抗氧化
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect10").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect10.lizz_rcx-input
+														.choicemark
+														.txt 彈性
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect11").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect11.lizz_rcx-input
+														.choicemark
+														.txt 保濕
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect12").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect12.lizz_rcx-input
+														.choicemark
+														.txt 滋潤 消除疲勞
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect13").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect13.lizz_rcx-input
+														.choicemark
+														.txt 抗藍光 防曬
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect14").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect14.lizz_rcx-input
+														.choicemark
+														.txt 隔離 美白
+												li.lizz_rcx.OEM_effect-item
+													label(for="OEM-Effect15").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect15.lizz_rcx-input
+														.choicemark
+														.txt 去斑
+												li.lizz_rcx.OEM_effect-item.d-flex
+													label(for="OEM-Effect16").lizz_rcx-label
+														input(type="checkbox")#OEM-Effect16.lizz_rcx-input
+														.choicemark
+														.txt 其他
+													.lizz_frm-field.ml-2
+														input(type="text" placeholder="請輸入您的答案").lizz_frm-input.style2.form-control
+									.contact_form-OEM_fragrance.form-group
+										label(for="").lizz_frm-label 香味
+										.lizz_frm-field.OEM_fragrance-list
+											ul.lis-n.d-flex
+												li.lizz_rcx.OEM_fragrance-item
+													label(for="OEM-Fragrance1").lizz_rcx-label
+														input(type="checkbox")#OEM-Fragrance1.lizz_rcx-input
+														.choicemark
+														.txt 花香
+												li.lizz_rcx.OEM_fragrance-item
+													label(for="OEM-Fragrance2").lizz_rcx-label
+														input(type="checkbox")#OEM-Fragrance2.lizz_rcx-input
+														.choicemark
+														.txt 草香
+												li.lizz_rcx.OEM_fragrance-item
+													label(for="OEM-Fragrance3").lizz_rcx-label
+														input(type="checkbox")#OEM-Fragrance3.lizz_rcx-input
+														.choicemark
+														.txt 果香
+												li.lizz_rcx.OEM_fragrance-item
+													label(for="OEM-Fragrance4").lizz_rcx-label
+														input(type="checkbox")#OEM-Fragrance4.lizz_rcx-input
+														.choicemark
+														.txt 木質香
+												li.lizz_rcx.OEM_fragrance-item
+													label(for="OEM-Fragrance5").lizz_rcx-label
+														input(type="checkbox")#OEM-Fragrance5.lizz_rcx-input
+														.choicemark
+														.txt 精油
+												li.lizz_rcx.OEM_fragrance-item
+													label(for="OEM-Fragrance6").lizz_rcx-label
+														input(type="checkbox")#OEM-Fragrance6.lizz_rcx-input
+														.choicemark
+														.txt 無
+												li.lizz_rcx.OEM_fragrance-item.d-flex
+													label(for="OEM-Fragrance7").lizz_rcx-label
+														input(type="checkbox")#OEM-Fragrance7.lizz_rcx-input
+														.choicemark
+														.txt 其他
+													.lizz_frm-field.ml-2
+														input(type="text" placeholder="請輸入您的答案").lizz_frm-input.style2.form-control
+									.contact_form-OEM_application.form-group
+										label(for="").lizz_frm-label 證號申請
+										.lizz_frm-field.OEM_application-list
+											ul.lis-n.d-flex
+												li.lizz_rcx.OEM_application-item
+													label(for="OEM-Application1").lizz_rcx-label
+														input(type="checkbox")#OEM-Application1.lizz_rcx-input
+														.choicemark
+														.txt 美白
+												li.lizz_rcx.OEM_application-item
+													label(for="OEM-Application2").lizz_rcx-label
+														input(type="checkbox")#OEM-Application2.lizz_rcx-input
+														.choicemark
+														.txt 抗痘
+												li.lizz_rcx.OEM_application-item
+													label(for="OEM-Application3").lizz_rcx-label
+														input(type="checkbox")#OEM-Application3.lizz_rcx-input
+														.choicemark
+														.txt 防曬(SPF)
+												li.lizz_rcx.OEM_application-item
+													label(for="OEM-Application4").lizz_rcx-label
+														input(type="checkbox")#OEM-Application4.lizz_rcx-input
+														.choicemark
+														.txt 無
+												li.lizz_rcx.OEM_application-item.d-flex
+													label(for="OEM-Application5").lizz_rcx-label
+														input(type="checkbox")#OEM-Application5.lizz_rcx-input
+														.choicemark
+														.txt 其他
+													.lizz_frm-field.ml-2
+														input(type="text" placeholder="請輸入您的答案").lizz_frm-input.style2.form-control
+									.contact_form-OEM_preferences.form-group
+										label(for="").lizz_frm-label 產品喜好
+										.lizz_frm-field.OEM_preferences-list.d-flex
+											.title 稠度
+											ul.lis-n.d-flex
+												li.lizz_rcx.OEM_preferences-item
+													label(for="OEM-Preferences1").lizz_rcx-label
+														input(type="checkbox")#OEM-Preferences1.lizz_rcx-input
+														.choicemark
+														.txt 流動
+												li.lizz_rcx.OEM_preferences-item
+													label(for="OEM-Preferences2").lizz_rcx-label
+														input(type="checkbox")#OEM-Preferences2.lizz_rcx-input
+														.choicemark
+														.txt 不流動
+										.lizz_frm-field.OEM_preferences-list.d-flex
+											.title 透明度
+											ul.lis-n.d-flex
+												li.lizz_rcx.OEM_preferences-item
+													label(for="OEM-Preferences3").lizz_rcx-label
+														input(type="checkbox")#OEM-Preferences3.lizz_rcx-input
+														.choicemark
+														.txt 透明
+												li.lizz_rcx.OEM_preferences-item
+													label(for="OEM-Preferences4").lizz_rcx-label
+														input(type="checkbox")#OEM-Preferences4.lizz_rcx-input
+														.choicemark
+														.txt 微霧
+												li.lizz_rcx.OEM_preferences-item
+													label(for="OEM-Preferences5").lizz_rcx-label
+														input(type="checkbox")#OEM-Preferences5.lizz_rcx-input
+														.choicemark
+														.txt 不透明
+									.contact_form-OEM_msg.form-group
+										label(for="").lizz_frm-label 補充說明
+										.lizz_frm-field
+											textarea(placeholder="請輸入您的訊息").lizz_frm-textarea.form-control
+									.contact_form-btns
+										button(type="button").contact_form-btn.lizz_btn.lizz_btn-default 送出
+				// section.main_section  END  !!
+		// main.page_section.page_main-bd  END  !!
+
+
+
+block page_script
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js" integrity="sha512-RCgrAvvoLpP7KVgTkTctrUdv7C6t7Un3p1iaoPr1++3pybCyCsCZZN7QEHMZTcJTmcJ7jzexTO+eFpHk4OCFAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/i18n/datepicker.zh-CN.min.js" integrity="sha512-+Kzb//leE+AI7TOftepZVEdPdbYUzESx7BjFoNVc+QgMTRY0m+7Y1e7yXyGDTchCpG/DG30TLlS3zgxRUVqN5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	script(src="./public/js/page/contact.js?v=" + version)
+

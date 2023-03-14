@@ -1,0 +1,72 @@
+.body-top {
+    @include absolute(0);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+
+.body_wrap {
+    // transform: translateX(0px);
+    // position: relative;
+    // left: 0;
+    // transition: all 0.3s $easeInOutCubic3;
+
+    .js-open-mobile-menu & {
+        // @include media-down(1200px) {
+        //     left: -300px;
+        // }
+    }
+}
+
+// .m_mask {
+// 	@include wh;
+// 	@include fixed(0, $L:0);
+// 	z-index: 10;
+// 	background-color: #fff;
+// 	opacity: 0.5;
+// 	display: none;
+// 	.js-show-mmenu & {
+// 		display: block;
+// 	}
+// }
+
+.page_wrap {
+    position: relative;
+    z-index: 10;
+}
+
+.page_header {
+    @include fixed(0);
+    z-index: 30;
+
+    .logged-in.admin-bar & {
+        top: 32px;
+    }
+}
+
+
+.page_footer {
+	position: relative;
+    z-index: 20;
+}
+
+
+
+.web_flower {
+    @include fixed($B:0, $L:0);
+    z-index: 1;
+    @include wh(image-width('flower.png'), image-height('flower.png'));
+    background-image: url(../images/decoration/flower.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    pointer-events: none;
+
+    @include media-down(sm) {
+        display: none;
+    }
+
+    @media (max-width: 375px) {
+    }
+}
+

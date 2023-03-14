@@ -1,0 +1,167 @@
+/*------------------------------------------------------------------------*/
+/* .page_header */
+.page_header {
+	width: 100%;
+	// padding: 2rem 0;
+	height: $header_h * 1px;
+	background: rgba(114, 112, 91, 0.8);
+	backdrop-filter: blur(20px);
+
+	&-container {
+		position: relative;
+		height: 100%;
+		// display: flex;
+		// justify-content: space-between;
+		display: grid;
+		grid-template-columns: auto auto;
+		align-items: center;
+	}
+
+	.web_logo {
+		display: block;
+		@include wh(323, 31);
+
+		@include media-down(sm) {
+			width: 200px;
+		}
+
+		@include media-down(xs) {
+			// width: 180px;
+		}
+
+		h1 {
+			position: absolute;
+			z-index: -1;
+		}
+	}
+
+	&-menu {
+		height: 100%;
+		// display: grid;
+		// grid-template-columns: auto auto;
+		display: flex;
+		justify-self: end;
+		.page_nav {
+
+		}
+		.tools {
+			flex: 0 0 40px;
+		}
+
+		@include media-down(1200px) {
+
+			@include fixed(0, -300);
+			z-index: 90;
+			display: flex;
+			flex-direction: column;
+			width: 300px;
+			height: 100vh;
+			background-color: color("2nd");
+
+			transition: $transition-base;
+
+			.page_nav {
+				order: 1;
+			}
+
+			.tools {
+				order: 0;
+			}
+
+			.js-open-mobile-menu & {
+				right: 0;
+			}
+		}
+	}
+
+
+}
+
+/*
+.page_header-left {
+	// @include absolute();
+	display: flex;
+	align-items: center;
+	flex: auto;
+}
+.page_header-right {
+	// @include absolute();
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex: auto;
+}
+.page_header-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: auto;
+
+	.page_nav {
+		// flex: 1 1 30%;
+	}
+	.web_logo {
+		flex: 0 0 115px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+*/
+
+// .mbr_info {
+// 	> ul {
+// 		display: flex;
+// 		align-items: center;
+// 	}
+
+// 	&-item {
+// 		float: left;
+
+// 		color: #000;
+
+// 		> .inner {
+// 			display: flex;
+// 			align-items: center;
+
+// 			background-color: transparent;
+// 			border: none;
+// 		}
+
+// 		&:not(:first-of-type) {
+// 			margin-left: 1rem;
+// 		}
+
+// 		.icon_block {
+// 			position: relative;
+// 			margin-right: 0.8rem;
+// 		}
+
+// 		.inni_badge {
+// 			@include absolute(-12px, -12px);
+// 		}
+
+
+// 		.sign_in_out {
+// 			border-radius: 5px;
+// 			padding: 0.25rem 0.5rem;
+// 			background-color: transparent;
+// 			transition: $transition-base;
+
+// 			&:hover {
+// 				background-color: $hover_color;
+// 			}
+// 		}
+
+// 		.cart {
+// 			border-radius: 5px;
+// 			padding: 0.25rem 0.5rem;
+// 			background-color: transparent;
+// 			transition: $transition-base;
+
+// 			&:hover {
+// 				background-color: $hover_color;
+// 			}
+// 		}
+// 	}
+// }
+

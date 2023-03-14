@@ -1,0 +1,158 @@
+$field_height: 50;
+$field_bd_color: #D1D1D1;
+
+%inputStyle1 {
+	border: none;
+	border-radius: 2px;
+	background-color: #FAF8F5;
+
+	&:hover, &:focus {
+		background-color: #FAF8F5;
+		box-shadow: inset $boxShadow-weak ;
+	}
+	&:focus {
+		border: 1px solid color("brand");
+	}
+}
+%inputStyle2 {
+	height: 40px;
+	border: 1px solid #E5E5E5;
+	border-radius: 0;
+	background-color: #FFF;
+
+	&:hover, &:focus {
+		background-color: #FFF;
+		box-shadow: inset $boxShadow-weak ;
+	}
+	&:focus {
+		border: 1px solid color("brand");
+	}
+}
+.#{$project_name}_frm {
+
+	&-label {
+		// flex: 0 0 auto;
+		// color: #000;
+		margin-bottom: 0.5rem;
+		font-weight: 300;
+
+		&:after {
+			.required & {
+				content: '*';
+				display: inline-block;
+				margin-left: 0.3rem;
+			}
+		}
+	}
+
+	&-field {
+		// flex: 0 0 auto;
+		// padding-left: 0.8rem;
+	}
+
+	&-input {
+		width: 100%;
+		height: $field_height * 1px;
+		padding: 0 1.5rem;
+		@extend %inputStyle1;
+
+		&:focus {
+
+		}
+
+		&.style2 {
+			@extend %inputStyle2;
+		}
+	}
+
+	&-error {
+		@include absolute(60%);
+		z-index: -1;
+		height: 0;
+		opacity: 0;
+		&:not(:empty) {
+			z-index: 2;
+			height: auto;
+			background-color: $red;
+			padding: 0.3rem 0.8rem;
+			border-radius: 5px;
+			color: $red;
+			opacity: 1;
+			transition: $transition-base;
+
+			&:before {
+				@include psudoClass;
+				@include absolute(-8px, $L:1rem);
+				@include triangle('top', $red, 8px);
+			}
+			// padding-top: 0.3rem;
+			// color: color("main");
+
+			// &.js-show {
+			// 	opacity: 1;
+			// }
+		}
+	}
+
+
+
+	// &-select {
+	// 	position: relative;
+	// 	width: 100%;
+	// 	height: $field_height * 1px;
+	// 	border-radius: 5px;
+	// 	border: 1px solid $field_bd_color;
+	// 	background-color: #fff;
+
+	// 	cursor: pointer;
+
+	// 	@include media-breakpoint-down(md) {
+	// 		height: 35px;
+	// 	}
+
+	// 	select {
+	// 		position: relative;
+	// 		z-index: 2;
+	// 		border: none;
+	// 		@include wh;
+	// 		background-color: transparent;
+	// 		padding-left: 0.8rem;
+	// 		padding-right: 0.8rem;
+	// 	}
+
+
+	// 	.arrow {
+	// 		@include psudoClass;
+	// 		@include absolute(calc(50% - 3px), 1rem);
+	// 		z-index: 1;
+	// 		@include triangle('bottom', #3C3A39, 8px);
+
+	// 		transition: $transition-base;
+	// 	}
+
+	// 	&.js-open {
+	// 		.arrow {
+	// 			transform: scaleY(-1);
+	// 		}
+	// 	}
+	// }
+
+	&-textarea {
+		width: 100%;
+		border-radius: 2px;
+		resize: none;
+
+		padding: 0.5rem 1.5rem;
+		@extend %inputStyle1;
+
+		&.lizz_frm-textarea {
+			height: 200px;
+		}
+	}
+
+	&-btn {
+		border: none;
+		background-color: transparent;
+	}
+
+}

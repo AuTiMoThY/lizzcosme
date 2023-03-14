@@ -1,0 +1,98 @@
+$pag-default-color: #231815;
+$pag-active-color: #fff;
+
+/*
+<nav class="navigation pagination" role="navigation" aria-label="文章">
+    <h2 class="screen-reader-text">文章導覽</h2>
+    <div class="nav-links">
+        <a class="prev page-numbers" href="http://lizzcosme.designhu-demo.com/news/page/1/">
+            <div class="svgicon">
+                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 1L1 5L5 9"></path>
+                </svg>
+            </div>
+        </a>
+        <a class="page-numbers" href="http://lizzcosme.designhu-demo.com/news/page/1/">1</a>
+        <span aria-current="page" class="page-numbers current">2</span>
+        <a class="page-numbers" href="http://lizzcosme.designhu-demo.com/news/page/3/">3</a>
+        <a class="page-numbers" href="http://lizzcosme.designhu-demo.com/news/page/4/">4</a>
+        <a class="next page-numbers" href="http://lizzcosme.designhu-demo.com/news/page/3/">
+            <div class="svgicon">
+                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L5 5L1 9"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
+</nav>
+*/
+
+.#{$project_name}_pagination {
+	padding: 50px 0;
+
+	.pagination {
+
+	}
+
+	.nav-links {
+		display: flex;
+		justify-content: center;
+	}
+
+	.screen-reader-text {
+		display: none;
+	}
+
+	.page-numbers {
+		&:not(:first-child) {
+			margin-left: 0.8rem;
+		}
+	}
+
+}
+
+
+// 按鈕樣式
+.#{$project_name}_pagination {
+	.page-numbers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include wh(40);
+		background-color: rgba(#72705B, 0);
+		// border: none;
+		border: 1px solid #72705B;
+		color: #72705B;
+
+		transition: $transition-base;
+
+		@include media-breakpoint-down(xs) {
+			@include wh(35);
+		}
+
+		&:hover {
+			background-color: rgba(#72705B, 1);
+			box-shadow: 0 0 5px rgba(#72705B, 1);
+			color: #fff;
+		}
+
+		&.current {
+			background-color: rgba(#72705B, 1);
+			// border: 1px solid $pag-default-color;
+			color: #fff;
+		}
+
+	}
+	.prev, .next {
+		.svgicon {
+			// fill: currentColor;
+			width: 6px;
+			path {
+				stroke: currentColor;
+				transition: $transition-base;
+			}
+		}
+
+	}
+
+}

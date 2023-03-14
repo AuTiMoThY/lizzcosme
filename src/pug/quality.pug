@@ -1,0 +1,104 @@
+extends _layout.pug
+block vars
+	- var page_class = "quality_page";
+	- var page_title = "品質管理";
+
+
+block page_pluginStyle
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// .page_section.page_main-hd  START
+		section.page_section.page_main-hd
+			.page_main-hd-inner.text-center
+				h2.title #{page_title}
+				.lizz_breadcrumb
+					ul.cf.lis-n
+						li.lizz_breadcrumb-item
+							a(href="./").inner 首頁
+						li.lizz_breadcrumb-item.current
+							.arrow /
+							a(href="javascript:;").inner #{page_title}
+		// section.page_section.page_main-hd  END  !!
+		// =========================================================================
+		// article.page_section.page_main-bd  START
+		article.page_section.page_main-bd.quality_article
+			.container
+				section.main_section.article-top
+					.row
+						.col-md-4
+							.article-pic.img-style1
+								.img_div
+									img(src=PATH_IMG + "rnd/rnd1.jpg")
+						.col-md-7.offset-md-1.d-flex
+							.article-content.align-self-center
+								.txt_block
+									p.tzt 近年來，消費者對於健康養生意識高漲，許多保養品活性成分皆標榜萃取，但萃取來源眾多，品質稱差不齊，因此儷氏選擇導入植物組織培養生產無病毒材料之技術的協力原料廠，生產品質優良之原料，萃取分離其活性成分，開發高品質保養品原料，提升產品價值增加活性成分之效用。
+									p.txt 儷氏的研發團隊，研究和開發新項目，滿足不同客戶的需求。憑藉專業的研發人員和先進的設備，與多家知名保養品公司合作，並成功地幫助客戶發展自己的品牌、拓展海外市場。
+									.big_txt 研發品項
+				// section.main_section  END  !!
+				section.main_section.team_work
+					h3.main_section-heading 研發團隊工作
+					.row.align-items-center
+						.col-md-4.quality_article-pic
+							.img_div
+								img(src=PATH_IMG + "quality/quality1.jpg")
+						.col-md-7.offset-md-1.quality_article-content
+							.team_work_list
+								ul.lis-n.row
+									li.team_work_item.col-12.col-sm-6
+										.inner
+											.title 物料
+											.txt 落實進料檢驗，確保原料正常無虞
+									li.team_work_item.col-12.col-sm-6
+										.inner
+											.title 成品
+											.txt 同樣觀察充填完成之產品其產品的狀態
+									li.team_work_item.col-12.col-sm-6
+										.inner
+											.title 樣品
+											.txt 針對打樣品同步進行各種安定性觀察
+									li.team_work_item.col-12.col-sm-6
+										.inner
+											.title 水質
+											.txt 針對水源定期進行保養及微生物檢測
+									li.team_work_item.col-12.col-sm-6
+										.inner
+											.title 半成品
+											.txt 保留並觀察量產完成的品項，掌握產品狀況
+									li.team_work_item.col-12.col-sm-6
+										.inner
+											.title 環境
+											.txt 針對量產、充填環境定期作微生物檢測
+				// section.main_section  END  !!
+				section.main_section.design_and_planning
+					h3.main_section-heading 代工產品量產製程的設計與規劃
+					.row
+						.col-md-4.design_and_planning-pic
+							.img_div
+								img(src=PATH_IMG + "quality/quality3.jpg")
+						.col-md-7.offset-md-1.design_and_planning-content
+							ul.design_and_planning-list.lis-n
+								li.design_and_planning-item 設計標準化與具有最佳生產效益的代工產品製程
+								li.design_and_planning-item 研製安全與有效的客製化產品配方
+								li.design_and_planning-item 確保生產原料、半成品原料、包裝的包材與成品的品質
+								li.design_and_planning-item 原料、半成品原料與最後成品的生菌數測試
+								li.design_and_planning-item 針對肌膚五大需求設計，提供對症下藥破解肌膚困擾
+								li.design_and_planning-item 嚴選原料：國家核可成分＋歐洲/日本知名大廠
+								li.design_and_planning-item 不添加禁用成分及動物實驗原料
+								li.design_and_planning-item 系列區分：經過市調與肌膚測試＋各系列符合不同膚質適用
+								li.design_and_planning-item 導入歐盟有機認證成分並公開使用原料來源證明
+								li.design_and_planning-item 原物料ECOCERT、COSMOS有機認證
+
+
+		// article.page_section.page_main-bd  END  !!
+
+
+
+block page_script
+	script(src="./public/js/page/quality.js?v=" + version)
+

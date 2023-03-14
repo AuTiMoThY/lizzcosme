@@ -1,0 +1,20 @@
+.#{$project_name}_link {
+	display: flex;
+	align-items: center;
+	font-weight: 300;
+	letter-spacing: 2px;
+
+	color: color("secondary");
+	.link-arrow {
+		width: 11px;
+		height: 7px;
+
+		margin-left: 10px;
+	}
+
+	@include hover_line(2, color("secondary"));
+
+	&:hover {
+		color: currentColor;
+	}
+}

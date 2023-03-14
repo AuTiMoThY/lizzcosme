@@ -1,0 +1,40 @@
+.experience_article {
+    &-item {
+        position: relative;
+        padding-left: 1rem;
+
+        &:before {
+            @include psudoClass;
+            @include absolute(0, $L:0, $B:0);
+            margin: auto;
+            @include wh(4);
+            background-color: color("secondary");
+            transform: rotate(45deg);
+        }
+        &:not(:first-of-type) {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.be_applicable {
+    &-inner {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+
+        background-color: #FAF8F5;
+        padding: 0 40px;
+        height: 100px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 5px 10px rgba(114, 112, 91, 0.1);
+        .icon {
+            @include wh(56);
+            margin-right: 1.5rem;
+            flex: 0 0 56px;
+        }
+        .txt {
+            margin-bottom: 0;
+        }
+    }
+}

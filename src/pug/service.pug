@@ -1,0 +1,58 @@
+extends _layout.pug
+block vars
+	- var page_class = "service_page oem_odm";
+	- var page_title = "產品代工&配方設計";
+
+
+block page_pluginStyle
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// .page_section.page_main-hd  START
+		section.page_section.page_main-hd
+			.page_main-hd-inner.text-center
+				h2.title #{page_title}
+				.lizz_breadcrumb
+					ul.cf.lis-n
+						li.lizz_breadcrumb-item
+							a(href="./").inner 首頁
+						li.lizz_breadcrumb-item.current
+							.arrow /
+							a(href="javascript:;" disable).inner #{page_title}
+		// section.page_section.page_main-hd  END  !!
+		// =========================================================================
+		// article.page_section.page_main-bd  START
+		article.page_section.page_main-bd.service_article
+			.container
+				section.main_section.row
+					.col-md-6.service_article-cnt
+						h3.service_article-heading.txt-h4.txt-secondary OEM - 產品代工
+						p.service_article-txt.txt-secondary 您已有自己的品牌，可根據您的要求製作試樣，並向客戶說明擬訂計畫到交貨的代工服務、明確流程、提供您便捷專業代工方案。
+					.col-md-6.service_article-pic
+						.img_div
+							img(src=PATH_IMG + "services/OEM.svg" alt="01.客戶接洽、02.了解客戶需求、03.研發打樣、04.確認、05.生產製造、06.QC品檢、07.包裝出貨")
+				section.main_section.row
+					.col-md-6.service_article-cnt
+						h3.service_article-heading.txt-h4.txt-secondary ODM - 配方設計
+						p.service_article-txt.txt-secondary 根據您的要求製作試樣，並向您說明擬訂計畫到交貨的代工服務、明確流程、提供您創建自己品牌推廣銷售的最佳方案。我們也會提供您產品設計、生產、通路、營銷策略的想法建議。
+					.col-md-6.service_article-pic
+						.img_div
+							img(src=PATH_IMG + "services/ODM.svg" alt="01.了解客戶需求、02.提案、03.研發打樣、04.確認、05.生產、06.QC品檢、07.包裝、08.出貨")
+
+				section.main_section
+					.hint_block.txt-secondary
+						h3.hint_block-heading Hint
+						p.hint_block-txt 儷氏會依業主的需求進行配方設計與打樣，為與客戶共創雙贏，每款產品打樣酌收新台幣兩千元，採精準打樣至多三次。若需求的產品原料特殊，將另酌收原料費。確定量產，打樣費將直接扣抵貨款。
+						p.hint_block-txt 一般的量為10~50g，約7個工作天，原料取得時間需較久外之樣品除外，若有超出的大量需求可另行洽談。
+
+		// article.page_section.page_main-bd  END  !!
+
+
+
+block page_script
+	script(src="./public/js/page/service.js?v=" + version)
+

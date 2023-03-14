@@ -1,0 +1,122 @@
+doctype html
+html(class="" lang="zh-Hant")
+	- var current_active = "";
+	- var version = "20210625";
+	- var is_login = 0;
+	- var PATH_IMG = "public/images/";
+	- var page_class = "";
+	- var page_title = "";
+	- var web_name = "儷氏化粧品";
+	block vars
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		block title
+			title #{page_title} | #{web_name}
+		meta(name="keywords", content="")
+		meta(name="description", content="")
+		meta(name="robots", content="index,follow")
+		meta(name="viewport", content="width=device-width, user-scalable=no")
+
+		// 讓手機不判斷它是電話號碼變顏色
+		meta(name="format-detection", content="telephone=no")
+
+		block page_pluginStyle
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+		link(rel="stylesheet", href="public/css/header-template.css?v=" + version)
+
+		// js
+		script(src="public/js/libs/modernizr-custom.min.js")
+		script(src="public/js/ModernizrAu.js")
+
+
+	body
+		// =========================================================================
+		// .body_wrap  START
+		.body_wrap
+			header.page_header
+				.container.page_header-container
+					.web_logo
+						h1.text-hide.m-0 LIZZ COSMETICS 儷氏化粧品
+						a(href="javascript:;").pic
+							img(src=PATH_IMG + "logo.svg", alt="LIZZ COSMETICS 儷氏化粧品")
+					.page_header-menu
+						nav.page_nav
+							ul.cf.lis-n
+								li.page_nav-item(data-highlight="about")
+									a(href="javascript:;").page_nav-item-link 關於儷氏
+									nav.sub_page_nav
+										ul.lis-n
+											li.sub_page_nav-item
+												a(href="javascript:;").sub_page_nav-item-link 公司簡介
+											li.sub_page_nav-item
+												a(href="javascript:;").sub_page_nav-item-link 我們的優勢
+											li.sub_page_nav-item
+												a(href="javascript:;").sub_page_nav-item-link 儷氏實驗室
+											li.sub_page_nav-item
+												a(href="javascript:;").sub_page_nav-item-link 生產環境
+								li.page_nav-item(data-highlight="service")
+									a(href="javascript:;").page_nav-item-link 服務項目
+									nav.sub_page_nav
+										ul.lis-n
+											li.sub_page_nav-item
+												a(href="javascript:;").sub_page_nav-item-link 產品代工&配方設計
+											li.sub_page_nav-item
+												a(href="javascript:;").sub_page_nav-item-link 代工劑型
+											li.sub_page_nav-item
+												a(href="javascript:;").sub_page_nav-item-link 面膜生產
+											li.sub_page_nav-item
+												a(href="javascript:;").sub_page_nav-item-link 試用體驗包
+											li.sub_page_nav-item
+												a(href="javascript:;").sub_page_nav-item-link 常見問題
+								li.page_nav-item(data-highlight="rnd")
+									a(href="javascript:;").page_nav-item-link 研發&品質管理
+									nav.sub_page_nav
+										ul.lis-n
+											li.sub_page_nav-item
+												a(href="javascript:;").sub_page_nav-item-link 研發品項
+											li.sub_page_nav-item
+												a(href="javascript:;").sub_page_nav-item-link 品質管理
+								li.page_nav-item(data-highlight="news")
+									a(href="javascript:;").page_nav-item-link 產業新訊
+								li.page_nav-item(data-highlight="contact")
+									a(href="javascript:;").page_nav-item-link 聯絡我們
+						// nav.page_nav  END  !! -------------------------------------------------------------------------
+						.tools
+							.tools_ctrl
+								.tools_close
+									.icon
+								.tools_search
+									.icon
+										img(src=PATH_IMG + "icons/icon-search.svg")
+							.header_search
+								input(type="text" placeholder="請輸入關鍵字").header_search-input.lizz_frm-input.style2
+								button.header_search-btn.lizz_btn.lizz_btn-float(type="button")
+									.icon
+										img(src=PATH_IMG + "icons/icon-search.svg")
+					#m_menu.m_menu(onclick="lizzUI.mmenu().init();")
+						.group
+							.line1
+							.line2
+							.line3
+							.line4
+				// .container  END  !!-----
+			// header.page_header  END  !! -------------------------------------------------------------------------
+
+
+		block popup
+
+
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script window.jQuery || document.write('<script src="public/js/libs/jquery.min.js"><\/script>')
+		//-
+
+		script(src="public/plugins/snap.svg-min.js")
+
+		script(src="public/js/header-template.js?v=" + version)
+		block page_script

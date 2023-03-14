@@ -1,0 +1,35 @@
+.advantage {
+
+}
+
+.advantage_list {
+    padding: 40px;
+    background-color: #FAF8F5;
+
+    @include media-down(md) {
+        padding-bottom: 24px;
+    }
+}
+
+.advantage_item {
+    float: left;
+    width: 25%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include media-down(md) {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+    .icon {
+        margin-bottom: 1rem;
+        @include wh(56);
+    }
+    .txt {
+        @include remCalc(font-size, 14);
+        line-height: 22px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,65 @@
+extends _layout.pug
+block vars
+	- var page_class = "about_page";
+	- var page_title = "公司簡介";
+
+
+block page_pluginStyle
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// .page_section.page_main-hd  START
+		section.page_section.page_main-hd
+			.page_main-hd-inner.text-center
+				h2.title 公司簡介
+				.lizz_breadcrumb
+					ul.cf.lis-n
+						li.lizz_breadcrumb-item
+							a(href="./").inner 首頁
+						li.lizz_breadcrumb-item.current
+							.arrow /
+							a(href="javascript:;").inner 公司簡介
+		article.page_section.page_main-bd.about_article
+			.container
+				section.main_section
+					h3.main_section-heading.about_article-heading.txt-h5 1993年創立
+					.row
+						.col-md-4.about_article-pic
+							.img_div
+								img(src="./public/images/about/about1.jpeg")
+						.col-md-7.offset-md-1.about_article-content
+							p.txt 儷氏化粧品設立於1993年，擁有超過20年的豐厚經驗，持續致力於ODM/OEM的保養品開發，並取得ISO 22716優良製造規範指引的認證，從產品設計、生產到包裝完全符合國家法規和國際標準，主要提供各類美容保養品、清潔類用品的設計、研發製造、代工等專業OEM/ODM服務。
+							p.txt 近年陸續添購了許多研發、生產、充填包裝所需的新機器，以提高產品的質與量，且遵循化妝品ISO 22716達到標準、安定、安全三項生產目標，確保我們的產品品質能讓客戶放心。
+
+				section.main_section
+					h3.main_section-heading.about_article-heading.txt-h5 我們的理念
+					.row
+						.col-md-4.about_article-pic
+							.img_div
+								img(src="./public/images/about/about2.jpeg")
+						.col-md-7.offset-md-1.about_article-content
+							p.txt 本著以維護大眾健美，提高生活品質為己任，將先進技術與生化研究相結合，深入探討傳統保養清潔品的價值，利用優質的原料及協力廠商的後援，開發出「嫩白、健康、天然」，進而在保養清潔市場上創新、成長，讓生活可以很精采、豐富、而有收穫。
+							p.txt 儷氏全體員工將值齊心齊力，成為值得信賴可靠的保養品製造廠，並落實品質系統與有效的製程管制，成為品牌商最值得倚賴的夥伴。
+
+				section.main_section
+					h3.main_section-heading.about_article-heading.txt-h5 總經理的想法
+					.row
+						.col-md-4.about_article-pic
+							.img_div
+								img(src="./public/images/about/about3.jpeg")
+						.col-md-7.offset-md-1.about_article-content
+							p.txt 儷氏是一間專業的保養清潔品研發代工廠，成立至今超過20年了。<br>承襲當初創辦儷氏的父母對於保養產業的期待與專業技術，儷氏已成為少數順利由第二代接手轉型的成功實例。這些年來我們走過政治、社會、經濟的極大變遷，而這些考驗都沒有將儷氏擊倒。我們希望藉由這份堅毅，體現在研發與製程上，持續提供讓客戶滿意的服務。
+							p.txt 對於品質，我們總想得比別人多一些。客戶的信賴是企業重要的資產，所以我們對於品質的要求極為謹慎。領先業界採用歐盟檢驗標準、一系列的品質管理，都是儷氏對客戶的保障與用心。
+
+
+		// .page_section.page_main-hd  END  !!
+
+
+
+block page_script
+	script(src="./public/js/page/about.js?v=" + version)
+

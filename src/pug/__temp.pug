@@ -1,0 +1,56 @@
+extends _layout.pug
+block vars
+	- var page_class = "about_page env";
+	- var page_title = "生產環境";
+
+
+block page_pluginStyle
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// .page_section.page_main-hd  START
+		section.page_section.page_main-hd
+			.page_main-hd-inner.text-center
+				h2.title #{page_title}
+				.lizz_breadcrumb
+					ul.cf.lis-n
+						li.lizz_breadcrumb-item
+							a(href="./").inner 首頁
+						li.lizz_breadcrumb-item.current
+							.arrow /
+							a(href="javascript:;").inner #{page_title}
+			nav.page_main-nav
+				.page_main-nav-hd
+					h2.page_main-nav-heading.txt-h4 生產環境
+				.page_main-nav-bd
+					ul.lis-n
+						li.page_main-nav-item(v-for="item in list")
+							a.inner.lizz_link.lizz_link-no_arrow(v-bind:href="item.anchor_link") {{ item.name }}
+		// section.page_section.page_main-hd  END  !!
+		// =========================================================================
+		// article.page_section.page_main-bd  START
+		article.page_section.page_main-bd.about_article
+			.container
+				section.main_section.env_list
+					ul.lis-n
+						li.env_item(v-for="item in list" v-bind:id="item.anchor")
+							.row
+								.col-md-2.env_item-heading
+									h3.txt.txt-heading-vertical.txt-h5.txt-secondary {{ item.name }}
+								.col-md-6.env_item-content
+									.env_item-content-txt {{ item.content }}
+								.col-md-4.env_item-img
+									.img_div.fit-content
+										img(v-bind:src="item.pic")
+
+		// article.page_section.page_main-bd  END  !!
+
+
+
+block page_script
+	script(src="./public/js/page/about-env.js")
+

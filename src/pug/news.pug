@@ -1,0 +1,128 @@
+extends _layout.pug
+block vars
+	- var page_class = "news_page";
+	- var page_title = "產業新訊";
+
+
+block page_pluginStyle
+
+block popup
+
+block content
+	.page_wrap(class=page_class)
+		//- .m_mask
+		// =========================================================================
+		// .page_section.page_main-hd  START
+		section.page_section.page_main-hd
+			.page_main-hd-inner.text-center
+				h2.title #{page_title}
+				.lizz_breadcrumb
+					ul.cf.lis-n
+						li.lizz_breadcrumb-item
+							a(href="./").inner 首頁
+						li.lizz_breadcrumb-item.current
+							.arrow /
+							a(href="javascript:;").inner #{page_title}
+		// section.page_section.page_main-hd  END  !!
+		// =========================================================================
+		// article.page_section.page_main-bd  START
+		main.page_section.page_main-bd.news_main
+			.container
+				.row
+					aside.main_aside.col-lg-2
+						.news_category
+							h3.heading.txt-white.txt-h4 分類
+							ul.lis-n
+								li.news_category-item
+									a.inner(href="javascript:;") 所有文章
+								li.news_category-item
+									a.inner(href="javascript:;") 產業新訊
+								li.news_category-item
+									a.inner(href="javascript:;") 市場動態
+								li.news_category-item
+									a.inner(href="javascript:;") 原料趨勢
+								li.news_category-item
+									a.inner(href="javascript:;") 保養新知
+								li.news_category-item
+									a.inner(href="javascript:;") 化妝品法規
+					.main_container.col-lg-9.offset-xl-1
+						#newsMainList.news_main-list
+							ul.lis-n.row
+								li.col-md-6.col-xl-4.news_main-item(v-for="item in list")
+									.news_card
+										.inner
+											.news_card-pic
+												.news-pic.img_div
+													img(v-bind:src="item.pic")
+											.news_card-content.news-content
+												.news-content-hd
+													.news-tag
+														.icon.svgicon
+															include ../svg/icon-tag.svg
+														.txt {{ item.tag }}
+													.news-time
+														.icon.svgicon
+															include ../svg/icon-time.svg
+														.txt {{ item.time }}
+												.news-content-bd
+													.news-title {{ item.title }}
+													.news-brief {{ item.brief }}
+												.news-content-ft
+													a(href="news-detail.html").lizz_link.news-link 閱讀全文
+							.lizz_pagination
+								| <nav class="navigation pagination" role="navigation" aria-label="文章">
+								|     <h2 class="screen-reader-text">文章導覽</h2>
+								|     <div class="nav-links">
+								|         <a class="prev page-numbers" href="http://lizzcosme.designhu-demo.com/news/page/1/">
+								|             <div class="svgicon">
+								|                 <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								|                     <path d="M5 1L1 5L5 9"></path>
+								|                 </svg>
+								|             </div>
+								|         </a>
+								|         <a class="page-numbers" href="http://lizzcosme.designhu-demo.com/news/page/1/">1</a>
+								|         <span aria-current="page" class="page-numbers current">2</span>
+								|         <a class="page-numbers" href="http://lizzcosme.designhu-demo.com/news/page/3/">3</a>
+								|         <a class="page-numbers" href="http://lizzcosme.designhu-demo.com/news/page/4/">4</a>
+								|         <a class="next page-numbers" href="http://lizzcosme.designhu-demo.com/news/page/3/">
+								|             <div class="svgicon">
+								|                 <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								|                     <path d="M1 1L5 5L1 9"></path>
+								|                 </svg>
+								|             </div>
+								|         </a>
+								|     </div>
+								| </nav>
+								//- .pagination-prev
+								//- 	.pagination-btn
+								//- 		.svgicon
+								//- 			<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								//- 				<path d="M5 1L1 5L5 9"/>
+								//- 			</svg>
+								//- .pagination-list
+								//- 	ul.lis-n.cf
+								//- 		li.pagination-item.pagination-btn.js-active
+								//- 			a.inner(href="javascript:;") 1
+								//- 		li.pagination-item.pagination-btn
+								//- 			a.inner(href="javascript:;") 2
+								//- 		li.pagination-item.pagination-btn
+								//- 			a.inner(href="javascript:;") 3
+								//- 		li.pagination-item.pagination-btn
+								//- 			a.inner(href="javascript:;") 4
+								//- 		li.pagination-item.pagination-btn
+								//- 			a.inner(href="javascript:;") 5
+								//- .pagination-next
+								//- 	.pagination-btn
+								//- 		.svgicon
+								//- 			<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								//- 				<path d="M1 1L5 5L1 9"/>
+								//- 			</svg>
+
+
+		// article.page_section.page_main-bd  END  !!
+
+
+
+block page_script
+	script(src="./public/js/page/news.js?v=" + version)
+

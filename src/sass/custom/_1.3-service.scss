@@ -1,0 +1,181 @@
+.service {
+
+}
+
+.service_list {
+    ul {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        margin-left: -12px;
+        margin-right: -12px;
+
+        @include media-down(md) {
+            grid-template-columns: 100%;
+        }
+    }
+}
+
+.service_item {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 24px;
+    &-inner {
+        position: relative;
+        box-shadow: 0 5px 10px rgba(114, 112, 91, 0.1);
+        transition: $transition-base;
+
+        overflow: hidden;
+
+
+        @include media-down(sm) {
+            display: flex;
+            flex-direction: column;
+        }
+        .title {
+            writing-mode: vertical-lr;
+            @include absolute(0, $L:0);
+            z-index: 2;
+
+            width: 64px;
+            height: 100%;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            background-color: #fff;
+            margin: 0;
+
+            display: flex;
+            align-items: center;
+
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            color: #72705B;
+
+            transition: $transition-base;
+
+            @include media-down(sm) {
+                position: relative;
+                width: 100%;
+                height: auto;
+                order: 1;
+                writing-mode: unset;
+                padding: 0.8rem 1.2rem;
+
+                background-color: color("secondary");
+                color: #fff;
+            }
+        }
+
+        .cnt {
+            @include absolute(0, $L:0);
+            z-index: 1;
+
+            width: 174px;
+            height: 100%;
+            padding: 24px;
+            background-color: #fff;
+
+            transform: translateX(-100%);
+            transition: all 0.3s $easeInOutCubic3;
+
+            @include media-down(sm) {
+                position: relative;
+                width: 100%;
+                order: 2;
+                transform: translateX(0%);
+            }
+        }
+
+        .txt {
+            margin-bottom: 0;
+            @include text_ellipsis(8, 1.5);
+
+            @include media-down(sm) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .lizz_link {
+            @include absolute($B:24, $R:24);
+
+            @include media-down(sm) {
+                position: relative;
+                bottom: unset;
+                right: unset;
+            }
+        }
+
+        .img_div {
+            // @include rwdBlock(476, 300);
+            width: 100%;
+            height: 270px;
+            transition: $transition-base;
+
+            img {
+                // w100p
+            }
+
+            @include media-down(sm) {
+                // padding-bottom: 0;
+                // height: 270px;
+            }
+        }
+
+        &:hover {
+            box-shadow: $boxShadowHover1;
+
+            .title {
+                background-color: color("secondary");
+                color: #fff;
+            }
+
+            .cnt {
+                transform: translateX(64px);
+
+                @include media-down(sm) {
+                    transform: translateX(0);
+                }
+            }
+
+            .img_div {
+                filter: blur(3px);
+            }
+        }
+    }
+}
+
+
+.service_item.qna {
+    .service_item-inner {
+        height: 100%;
+        box-shadow: none;
+        border-bottom: 1px solid color("secondary");
+
+        @include media-down(md) {
+            @include rwdBlock(476, 300);
+        }
+
+
+        &::before {
+            @include psudoClass;
+            @include absolute($B:0, $L:0);
+            @include wh(1, 50%);
+            background-color: color("secondary");
+        }
+
+        .txt {
+            @include absolute($L:24, $B:64);
+            @include remCalc(font-size, 24);
+            line-height: 36px;
+            font-weight: 100;
+        }
+
+        .lizz_link {
+            position: absolute;
+            right: unset;
+            left: 24px;
+            bottom: 24px;
+        }
+    }
+}

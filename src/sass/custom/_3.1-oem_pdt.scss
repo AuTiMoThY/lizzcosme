@@ -1,0 +1,53 @@
+.oem_pdt_item {
+    &-heading {
+        position: relative;
+
+        .txt-heading-vertical {
+            left: 12px;
+
+            @include media-down(sm) {
+                position: relative;
+                left: unset;
+                padding-left: 0;
+
+                display: inline-block;
+                writing-mode: unset;
+                margin-bottom: 1.8rem;
+
+                &:after {
+                    position: relative;
+                    top: 8px;
+                    left: -4px;
+                    width: 100%;
+                    height: 1px;
+                }
+            }
+        }
+    }
+    &:not(:first-of-type) {
+        padding-top: 104px;
+    }
+    &-content {
+        padding-right: 16px;
+        @include media-down(md) {
+            padding-right: 0;
+        }
+        &-heading {
+            position: relative;
+            font-size: 1rem;
+            color: color('secondary');
+        }
+
+        &-txt {
+            @include media-down(md) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &-img {
+        .img_div {
+            // @include rwdBlock(376, 282);
+        }
+    }
+}

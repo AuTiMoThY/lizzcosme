@@ -1,0 +1,16 @@
+.svgicon {
+	display: block;
+	@include wh;
+	fill: currentColor;
+
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.icon-fb{
+	width: 7px;
+	height: 14px;
+}
